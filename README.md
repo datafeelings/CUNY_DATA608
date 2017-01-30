@@ -1,9 +1,7 @@
 IS 608 - Knowledge and Visual Analytics
 ===============
 
-This repository is a store for all materials associated with the CUNY MS Data Analytics Class IS 608 - Knowledge and Visual Analytics. 
-
-If you are a member of the class, I am going to maintain this page indefinitely. I hope that you find it a hepful reference in the future.
+This repository is a store for all materials associated with the CUNY MS Data Analytics Class IS 608 - Knowledge and Visual Analytics.
 
 
 ### What is git? What is GitHub? ###
