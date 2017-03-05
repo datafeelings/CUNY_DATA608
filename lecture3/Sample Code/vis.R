@@ -4,11 +4,23 @@ library(ggplot2)
 library(vegalite)
 library(quantmod)
 library(dplyr)
+library(plotly)
+library(jsonlite)
+
+# ggplot review
+
+df <- read.csv('https://raw.githubusercontent.com/charleyferrari/CUNY_DATA608/master/lecture3/Sample%20Code/hpi.csv')
+df$DATE <- as.POSIXct(strptime(df$DATE, format = '%m/%d/%y'))
+
+data <- df %>%
+  filter(Seasonality == 'SA', Metro == 'Atlanta') %>%
+  select(DATE, Tier, HPI)
+
+ggplot(data, aes(x = DATE, y = HPI, color = Tier)) + geom_line()
 
 # GoogleVis syntax
 
-setwd('/Users/Charley/Downloads/cuny/CUNY_DATA608/lecture3/Sample Code')
-df <- read.csv('hpi.csv')
+df <- read.csv('https://raw.githubusercontent.com/charleyferrari/CUNY_DATA608/master/lecture3/Sample%20Code/hpi.csv')
 df$DATE <- as.POSIXct(strptime(df$DATE, format = '%m/%d/%y'))
 
 data <- df %>%
@@ -55,8 +67,8 @@ plot(p)
 
 # Javascript Visualizations with a visualization grammer
 
-setwd('/Users/Charley/Downloads/cuny/CUNY_DATA608/lecture3/Sample Code')
-df <- read.csv('hpi.csv')
+
+df <- read.csv('https://raw.githubusercontent.com/charleyferrari/CUNY_DATA608/master/lecture3/Sample%20Code/hpi.csv')
 df$DATE <- as.POSIXct(strptime(df$DATE, format = '%m/%d/%y'))
 
 data <- df %>%
@@ -71,7 +83,7 @@ vegalite() %>%
   encode_color(field = 'Tier', type='nominal') %>%
   mark_line()
 
-# Aggregations``
+# Aggregations with Vega
 
 data <- read.csv('https://vega.github.io/vega-lite/data/seattle-temps.csv')
 
@@ -83,10 +95,21 @@ vegalite() %>%
   encode_y(field = 'temp', type='quantitative', aggregate = 'mean') %>%
   mark_bar()
 
+# HPI Dataset in Plotly
 
- 
-  
-encode_x()
+df <- read.csv('https://raw.githubusercontent.com/charleyferrari/CUNY_DATA608/master/lecture3/Sample%20Code/hpi.csv')
+df$DATE <- as.POSIXct(strptime(df$DATE, format = '%m/%d/%y'))
+
+data <- df %>%
+  filter(Seasonality == 'SA', Metro == 'Atlanta') %>%
+  select(DATE, Tier, HPI)
+
+plot_ly(data, x = ~DATE, y = ~HPI, color = ~Tier, type='scatter', mode='lines')
+
+##################################
+# Complex Comparison between Plotly and Vegalite
+# Vegalite Example
+
 vegalite() %>%
   cell_size(500, 300) %>%
   add_data("https://vega.github.io/vega-editor/app/data/unemployment-across-industries.json") %>%
@@ -98,6 +121,8 @@ vegalite() %>%
   scale_x_time(nice="month") %>%
   axis_x(axisWidth=0, format="%Y", labelAngle=0) %>%
   mark_area(interpolate="basis", stack="center")
+
+# And how I would recreate this in Vegalite
 
 data <- fromJSON(txt = 'https://vega.github.io/vega-editor/app/data/unemployment-across-industries.json')
 
@@ -125,53 +150,15 @@ p <- plot_ly(data5) %>%
   add_trace(y = formula(c), x = ~date, type='scatter', mode = 'lines',
             fill = 'tonexty', hoverinfo = 'none', showlegend = F)
 
-ind <- 'Agriculture'
-
-
-
-
 for(ind in tail(colnames(data4), -1)){
   var <- paste('~', ind, sep='')
   varHov <- paste('~', ind, '.Hover', sep='')
   p <- p %>%
     add_trace(x = ~date, y = formula(var), text = formula(varHov), type='scatter',
               mode = 'lines', fill = 'tonexty', name = ind, hoverinfo = 'text')
-  
-  print(var)
-  print(varHov)
 }
 
+p
 
-for(ind in c(1,2,3)){
-  var <- paste()
-  p <- p %>% add_trace()
-}
-
-
-
-data4 <- cbind(data2$date, data4)
-
-data5 <- melt(data4)
-
-plot_ly(data4, id.vars = 'date')
-
-data2 <- dcast(data2, date ~ series)
-
-plot_ly(data, x = ~date, y = ~count, color = ~series, type='scatter', mode = 'lines')
-
-library(jsonlite)
-
-
-
-data <- data.frame(a = c(1,2,3), b = c(2,4,6))
-
-setwd('/Users/Charley/Downloads/cuny/CUNY_DATA608/lecture3/Sample Code')
-
-df <- read.csv('hpi.csv')
-df$DATE <- as.POSIXct(strptime(df$DATE, format = '%m/%d/%y'))
-
-data <- df %>%
-  filter(Seasonality == 'SA', Metro == 'Atlanta') %>%
-  select(DATE, Tier, HPI)
-
-plot_ly(data, x = ~DATE, y = ~HPI, color = ~Tier, type='scatter', mode='lines')
+# And if I wanted to post this to my plotly account
+plotly_POST(p)

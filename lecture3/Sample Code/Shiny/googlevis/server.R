@@ -1,25 +1,31 @@
 library(ggplot2)
 library(dplyr)
+library(googleVis)
+library(reshape2)
 
 df <- read.csv('https://raw.githubusercontent.com/charleyferrari/CUNY_DATA608/master/lecture3/Sample%20Code/hpi.csv')
 df$DATE <- as.POSIXct(strptime(df$DATE, format = '%m/%d/%y'))
 
 function(input, output, session) {
   
-  output$plot1 <- renderPlot({
-    
+  selectedData <- reactive({
     dfSlice <- df %>%
       filter(Seasonality == input$seas, Metro == input$metro)
+  })
+  
+  output$plot1 <- renderGvis({
     
-    ggplot(dfSlice, aes(x = DATE, y = HPI, color = Tier)) +
-      geom_line()
+    dataSlice <- dcast(selectedData(), DATE ~ Tier, value.var = 'HPI')
+    
+    gvisLineChart(dataSlice, xvar = 'DATE', yvar = c('High', 'Middle', 'Low'))
+  
   })
   
   output$stats <- renderPrint({
-    dfSlice <- df %>%
-      filter(Seasonality == input$seas, Metro == input$metro, Tier == input$tier)
+    dfSliceTier <- selectedData() %>%
+      filter(Tier == input$tier)
     
-    summary(dfSlice$HPI)
+    summary(dfSliceTier$HPI)
   })
   
 }

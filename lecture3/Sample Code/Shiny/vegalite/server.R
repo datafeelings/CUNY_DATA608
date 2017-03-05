@@ -1,5 +1,6 @@
 library(ggplot2)
 library(dplyr)
+library(vegalite)
 
 df <- read.csv('https://raw.githubusercontent.com/charleyferrari/CUNY_DATA608/master/lecture3/Sample%20Code/hpi.csv')
 df$DATE <- as.POSIXct(strptime(df$DATE, format = '%m/%d/%y'))
@@ -11,13 +12,15 @@ function(input, output, session) {
       filter(Seasonality == input$seas, Metro == input$metro)
   })
   
-  output$plot1 <- renderPlot({
+  output$plot1 <- renderVegalite({
     
-    dfSlice <- df %>%
-      filter(Seasonality == input$seas, Metro == input$metro)
-    
-    ggplot(selectedData(), aes(x = DATE, y = HPI, color = Tier)) +
-      geom_line()
+    vegalite() %>%
+      cell_size(500, 300) %>%
+      add_data(selectedData()) %>%
+      encode_x(field = 'DATE', type='temporal') %>%
+      encode_y(field = 'HPI', type = 'quantitative') %>%
+      encode_color(field = 'Tier', type='nominal') %>%
+      mark_line()
   })
   
   output$stats <- renderPrint({

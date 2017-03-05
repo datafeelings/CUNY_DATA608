@@ -6,20 +6,25 @@ df$DATE <- as.POSIXct(strptime(df$DATE, format = '%m/%d/%y'))
 
 function(input, output, session) {
   
-  output$plot1 <- renderPlot({
+  selectedData <- reactive({
+    dfSlice <- df %>%
+      filter(Seasonality == input$seas, Metro == input$metro)
+  })
+  
+  output$plot1 <- renderPlotly({
     
     dfSlice <- df %>%
       filter(Seasonality == input$seas, Metro == input$metro)
     
-    ggplot(dfSlice, aes(x = DATE, y = HPI, color = Tier)) +
-      geom_line()
+    plot_ly(selectedData(), x = ~DATE, y = ~HPI, color = ~Tier, type='scatter',
+           mode = 'lines')
   })
   
   output$stats <- renderPrint({
-    dfSlice <- df %>%
-      filter(Seasonality == input$seas, Metro == input$metro, Tier == input$tier)
+    dfSliceTier <- selectedData() %>%
+      filter(Tier == input$tier)
     
-    summary(dfSlice$HPI)
+    summary(dfSliceTier$HPI)
   })
   
 }
