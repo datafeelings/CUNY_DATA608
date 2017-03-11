@@ -122,7 +122,7 @@ vegalite() %>%
   axis_x(axisWidth=0, format="%Y", labelAngle=0) %>%
   mark_area(interpolate="basis", stack="center")
 
-# And how I would recreate this in Vegalite
+# And how I would recreate this in Plotly
 
 data <- fromJSON(txt = 'https://vega.github.io/vega-editor/app/data/unemployment-across-industries.json')
 
@@ -131,6 +131,8 @@ data2 <- data %>%
   summarise(count = sum(count)) %>%
   dcast(date ~ series, value.var = 'count')
 
+data2$date <- substr(data2$date, 1, 10)
+data2$date <- as.POSIXct(strptime(data2$date, format = '%Y-%m-%d'))
 
 data3 <- data2 %>% select(-date)
 
@@ -148,17 +150,26 @@ data5 <- cbind(data2, data4)
 c <- '~zero'
 p <- plot_ly(data5) %>%
   add_trace(y = formula(c), x = ~date, type='scatter', mode = 'lines',
-            fill = 'tonexty', hoverinfo = 'none', showlegend = F)
+            fill = 'tonexty', hoverinfo = 'none', showlegend = F, fillcolor = 'rgba(0, 0, 0, 0)')
 
 for(ind in tail(colnames(data4), -1)){
   var <- paste('~', ind, sep='')
   varHov <- paste('~', ind, '.Hover', sep='')
   p <- p %>%
-    add_trace(x = ~date, y = formula(var), text = formula(varHov), type='scatter',
-              mode = 'lines', fill = 'tonexty', name = ind, hoverinfo = 'text')
+    add_trace(x = ~date, y = formula(var), 
+              text = formula(varHov), 
+              type='scatter', mode = 'lines', fill = 'tonexty', name = ind, 
+              hoverinfo = 'text+name+x')
 }
+
+p <- p %>%
+  layout(yaxis = list(showticklabels = F,
+                      showgrid = F,
+                      title = 'Unemployed (# Persons)', 
+                      zeroline = F),
+         xaxis = list(showgrid = F))
 
 p
 
 # And if I wanted to post this to my plotly account
-plotly_POST(p)
+plotly_POST(p, filename = 'Industries')
