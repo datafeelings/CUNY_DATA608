@@ -49,10 +49,10 @@ ggsave("lecture1/figure1.png",figure_1)
 print (company_by_state %>% slice(3))
 
 # The 3rd state in the rank is New York.
-# Construct a dataframe for NY excluding the values in the top and bottom 5% per 
-# industry in order to take care of outliers.
 # Before calculating the outliers, the industries with less than 10 observations 
 # each are put in a common bucket "Other"
+# The outliers are defined as employee counts exceeding 1.5 * IQR over the value of 
+# the 75th percentile in the respective industry.
 
 ny_employment_filtered = inp %>% select(Industry,Employees, State) %>% 
   filter(complete.cases(.) & State == "NY") %>% 
