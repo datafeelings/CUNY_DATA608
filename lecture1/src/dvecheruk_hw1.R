@@ -11,7 +11,7 @@ library("tidyr")
 library("ggplot2")
 
 # Read data
-inp = read_csv("lecture1/Data/inc5000_data.csv")
+inp = read_csv("https://raw.githubusercontent.com/datafeelings/CUNY_DATA608/master/lecture1/Data/inc5000_data.csv")
 
 # Inspect data
 summary(inp)
@@ -81,7 +81,7 @@ figure_2 =
   theme(panel.grid.major.y = element_blank(),panel.grid.minor.y = element_blank(),
         panel.grid.major.x = element_blank(),panel.grid.minor.x = element_blank()) 
   
-ggsave("lecture1/figure2.png",figure_2)
+ggsave("lecture1/figure2.png",width = 9,figure_2)
 
 
 # Now imagine you work for an investor and want to see which industries generate 
@@ -110,7 +110,7 @@ figure_3 = ggplot(rev_per_emp,aes(x=reorder(Industry,industry_rank))) +
   theme(panel.grid.minor.y = element_blank(),panel.grid.minor.x = element_blank(),
         legend.title = element_blank()) 
 
-ggsave("lecture1/figure3.png",figure_3)
+ggsave("lecture1/figure3.png",width = 9,figure_3)
 
 # Reference:
 # http://ggplot2.tidyverse.org/reference/index.html#section-coordinate-systems
