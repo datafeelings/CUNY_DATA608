@@ -1,0 +1,96 @@
+---
+title: "DATA 608 Homework 2"
+author: "Dmitriy Vecheruk"
+date: "9/16/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=F,warning=F}
+knitr::opts_chunk$set(echo = TRUE)
+library(bigvis)
+library(plotly)
+library(ggplot2)
+library(readr)
+library(dplyr)
+library(ggthemes)
+```
+
+### Collect the data
+
+```{r cache = T}
+source_url = "http://www1.nyc.gov/assets/planning/download/zip/data-maps/open-data/nyc_pluto_16v2%20.zip"
+dest_zip = "nyc_pluto_16v2.zip"
+ex_dir = "data/"
+
+if(!file.exists(paste0(ex_dir,"nyc_pluto_full.rds"))){
+  download.file(url = source_url,destfile = dest_zip,method = "auto",mode = "w")
+  unzip(zipfile = dest_zip,exdir = ex_dir)
+  
+  raw_files = list.files(path = ex_dir,pattern = "*.csv",recursive = T)
+
+dat = data.frame()
+for (item in raw_files){
+  tmp = read.csv(paste0(ex_dir,item))
+  dat = rbind(dat, tmp)
+  rm(tmp)
+}
+
+write_rds(dat, path = paste0(ex_dir,"nyc_pluto_full.rds"))
+} else {
+  dat = read_rds(paste0(ex_dir,"nyc_pluto_full.rds"))
+}
+
+dat = as_tibble(dat)
+```
+
+
+### Question 1  
+  
+*Build a graph to help the city determine when most buildings were constructed. Is there anything in the results that causes you to question the accuracy of the data? (note: only look at buildings built since 1850)*
+
+First, inspect the size and consistency of the data:  
++ Row count: `r nrow(dat)`
++ Range of building time:  min:`r min(dat$YearBuilt)`, max:`r max(dat$YearBuilt)`
+
+The maximum date is in the future, and the minimum time is zero, so some of the records are incorrect. We'll filter to the buildings built between 1850 and 2017 and count them in 10-year buckets:
+
+```{r}
+q1 = dat %>% 
+  filter(YearBuilt >= 1850)
+
+cnt_year_built = condense(bin(q1$YearBuilt, width=10,origin=1845), summary="count")
+```
+
+```{r message=F, warning=FALSE}
+
+q1_plot = ggplot(cnt_year_built) + geom_col(aes(x=q1.YearBuilt, y=round(.count/1000,1))) +
+  xlab('Year built interval') + ylab('Number of new buildings (in thousands)') + xlim(1845,2020)+ggtitle("Count of new buildings by 10-year interval of construction year")+theme_minimal()
+
+ggplotly (q1_plot)
+```
+
+Most buildings in the dataset were built after 1900, and there seems to be an unrealistic jump from 1.2k in 1890-1900 to 116.5k in 1900-1910. This is explained by the data dictionary accompanying the dataset:
+  
+> Year Built is accurate for the decade but not necessarily for the specific year. 
+> Two outliers – 1910 & 1920. Structures built between 1800s and early 1900s usually have a Year Built date of either 1910 or 1920.  
+  
+
+### Question 2  
+  
+*Create a graph that shows how many buildings of a certain number of floors were built in each year (note: you may want to use a log scale for the number of buildings). It should be clear when 20-story buildings, 30-story buildings, and 40-story buildings were first built in large numbers.*
+
+Inspect the `NumFloors` variable first:
+```{r}
+summary(dat$NumFloors)
+```
+
+We see 18.7k records without an information on the number of floor and also some records with zero floors. However, the data dictionary explains this:
+"If the NUMBER OF FLOORS is zero and the NUMBER OF BUILDINGS is greater than zero, then NUMBER OF FLOORS is not available for the tax lot.
+If the NUMBER OF FLOORS is zero and the NUMBER OF BUILDINGS is zero, then NUMBER OF FLOORS is not applicable for the tax lot."
+
+So we'll only consider the records with a positive `NumBldgs` and a positive `NumFloors`:
+
+### Question 3 
+  
+*Your boss suspects that buildings constructed during the US’s involvement in World War II (1941-1945) are more poorly constructed than those before and after. She thinks that, if you calculate assessed value per floor, you will see lower values for buildings at that time vs before or after. Construct a chart/graph to see if she’s right.*
+ 
