@@ -2,45 +2,74 @@
 title: "DATA 608 Homework 2"
 author: "Dmitriy Vecheruk"
 date: "9/16/2017"
-output: html_document
+output:
+  rmdformats::html_clean:
+    highlight: kate
+    toc: true
+    toc_float: true
+    code_folding: show
+
 ---
 
-```{r setup, include=FALSE, message=F,warning=F}
-knitr::opts_chunk$set(echo = TRUE)
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+library(rmdformats)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=FALSE,
+	             cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+```
+
+```{r setup, message=F,warning=F}
 library(bigvis)
 library(plotly)
 library(ggplot2)
 library(readr)
 library(dplyr)
 library(ggthemes)
+library(rmdformats)
 ```
 
 ### Collect the data
 
-```{r cache = T}
+```{r read_data}
 source_url = "http://www1.nyc.gov/assets/planning/download/zip/data-maps/open-data/nyc_pluto_16v2%20.zip"
 dest_zip = "nyc_pluto_16v2.zip"
 ex_dir = "data/"
+full_data_path = paste0(ex_dir,"nyc_pluto_full.csv")
 
-if(!file.exists(paste0(ex_dir,"nyc_pluto_full.rds"))){
-  download.file(url = source_url,destfile = dest_zip,method = "auto",mode = "w")
-  unzip(zipfile = dest_zip,exdir = ex_dir)
-  
-  raw_files = list.files(path = ex_dir,pattern = "*.csv",recursive = T)
-
-dat = data.frame()
-for (item in raw_files){
-  tmp = read.csv(paste0(ex_dir,item))
-  dat = rbind(dat, tmp)
-  rm(tmp)
-}
-
-write_rds(dat, path = paste0(ex_dir,"nyc_pluto_full.rds"))
-} else {
-  dat = read_rds(paste0(ex_dir,"nyc_pluto_full.rds"))
-}
+# if(file.exists(full_data_path)==F){
+#   
+#   download.file(url = source_url,destfile = dest_zip,method = "auto",mode = "w")
+#   unzip(zipfile = dest_zip,exdir = ex_dir)
+#   
+#   raw_files = list.files(path = ex_dir,pattern = "*.csv",recursive = T)
+# 
+# dat = data.frame()
+# for (item in raw_files){
+#   tmp = read.csv(paste0(ex_dir,item))
+#   dat = rbind(dat, tmp)
+#   rm(tmp)
+# }
+# 
+# write_csv(dat, path = full_data_path)
+# } else {
+  dat = read.csv(full_data_path)
+# }
 
 dat = as_tibble(dat)
+```
+
+```{r}
+# store data for the carto map
+
+
 ```
 
 
@@ -49,48 +78,211 @@ dat = as_tibble(dat)
 *Build a graph to help the city determine when most buildings were constructed. Is there anything in the results that causes you to question the accuracy of the data? (note: only look at buildings built since 1850)*
 
 First, inspect the size and consistency of the data:  
-+ Row count: `r nrow(dat)`
-+ Range of building time:  min:`r min(dat$YearBuilt)`, max:`r max(dat$YearBuilt)`
-
+  
+* Row count: `r nrow(dat)`  
+* Range of building time:  min:`r min(dat$YearBuilt)`, max:`r max(dat$YearBuilt)`  
+  
 The maximum date is in the future, and the minimum time is zero, so some of the records are incorrect. We'll filter to the buildings built between 1850 and 2017 and count them in 10-year buckets:
 
-```{r}
+```{r cache=T}
 q1 = dat %>% 
-  filter(YearBuilt >= 1850)
+  filter(is.na(YearBuilt)==F & YearBuilt >= 1850)
 
-cnt_year_built = condense(bin(q1$YearBuilt, width=10,origin=1845), summary="count")
+cnt_year_built = with(q1,condense(bin(YearBuilt, width=10,origin=1850), 
+                                  summary="count") )%>% 
+  filter(complete.cases(.)) %>% 
+  mutate(YearBuilt = YearBuilt-5) # to get to the beginning of the interval
+
 ```
 
 ```{r message=F, warning=FALSE}
 
-q1_plot = ggplot(cnt_year_built) + geom_col(aes(x=q1.YearBuilt, y=round(.count/1000,1))) +
-  xlab('Year built interval') + ylab('Number of new buildings (in thousands)') + xlim(1845,2020)+ggtitle("Count of new buildings by 10-year interval of construction year")+theme_minimal()
+q1_plot = ggplot(cnt_year_built) + geom_col(aes(x=YearBuilt, y=round(.count/1000,1))) +
+  xlab('Year built decade') + ylab('Number of new buildings (in thousands)') + xlim(1845,2020)+ggtitle("Count of new buildings by 10-year interval of construction year")+theme_minimal()
 
-ggplotly (q1_plot)
+ggplotly (q1_plot,width = 800)
 ```
 
 Most buildings in the dataset were built after 1900, and there seems to be an unrealistic jump from 1.2k in 1890-1900 to 116.5k in 1900-1910. This is explained by the data dictionary accompanying the dataset:
   
-> Year Built is accurate for the decade but not necessarily for the specific year. 
-> Two outliers – 1910 & 1920. Structures built between 1800s and early 1900s usually have a Year Built date of either 1910 or 1920.  
+*Year Built is accurate for the decade but not necessarily for the specific year.*  
+*Two outliers – 1910 & 1920. Structures built between 1800s and early 1900s usually have a Year Built date of either 1910 or 1920.*  
   
 
 ### Question 2  
   
-*Create a graph that shows how many buildings of a certain number of floors were built in each year (note: you may want to use a log scale for the number of buildings). It should be clear when 20-story buildings, 30-story buildings, and 40-story buildings were first built in large numbers.*
+*Create a graph that shows how many buildings of a certain number of floors were built in each year. It should be clear when 20-story buildings, 30-story buildings, and 40-story buildings were first built in large numbers.*
 
 Inspect the `NumFloors` variable first:
 ```{r}
 summary(dat$NumFloors)
 ```
-
+  
 We see 18.7k records without an information on the number of floor and also some records with zero floors. However, the data dictionary explains this:
-"If the NUMBER OF FLOORS is zero and the NUMBER OF BUILDINGS is greater than zero, then NUMBER OF FLOORS is not available for the tax lot.
-If the NUMBER OF FLOORS is zero and the NUMBER OF BUILDINGS is zero, then NUMBER OF FLOORS is not applicable for the tax lot."
-
+  
+*If the NUMBER OF FLOORS is zero and the NUMBER OF BUILDINGS is greater than zero, then NUMBER OF FLOORS is not available for the tax lot. If the NUMBER OF FLOORS is zero and the NUMBER OF BUILDINGS is zero, then NUMBER OF FLOORS is not applicable for the tax lot.*
+  
 So we'll only consider the records with a positive `NumBldgs` and a positive `NumFloors`:
+
+```{r}
+
+q2 = dat %>% 
+  filter(is.na(YearBuilt)==F & YearBuilt >= 1850) %>% 
+  filter(complete.cases(NumBldgs,NumFloors,YearBuilt)) %>% 
+  filter(NumBldgs > 0 & NumFloors > 0)
+
+
+cnt_year_floor = with(q2,condense(bin(YearBuilt, width=10,origin=1850),
+                                   bin(NumFloors, width=10,origin=0),
+                                   summary = "count")) %>% 
+  mutate(YearBuilt = YearBuilt-5, NumFloors = NumFloors-5) %>% 
+  mutate(NumFloors_txt = ifelse(NumFloors >= 50, "50+ floors",NumFloors)) %>% 
+  group_by(YearBuilt,NumFloors_txt) %>% 
+  summarise(.count = sum (.count)) %>% 
+  arrange(YearBuilt,NumFloors_txt)
+
+```
+
+```{r warning=F, message=F}
+q2_plot = ggplot(cnt_year_floor) + 
+  geom_col(aes(x=YearBuilt, y=.count,fill=factor(NumFloors_txt))) +
+  xlab('Year built decade') + ylab('Number of new buildings') +
+  xlim(1890,2020) +
+  facet_grid(NumFloors_txt~.,scales = "free_y") +
+  ggtitle("Count of new buildings by 10-year interval of construction year")+
+  guides (fill = guide_legend(title = "Min. floors"))+
+  theme_minimal()
+
+ggplotly (q2_plot,width = 800, height=500)
+```
+
+As we can see from the chart, the first boom in 20 and 30-storey buildings began in 1920 - 1930, and the 40-storey and higher buildings came in larger numbers after 1960.
 
 ### Question 3 
   
 *Your boss suspects that buildings constructed during the US’s involvement in World War II (1941-1945) are more poorly constructed than those before and after. She thinks that, if you calculate assessed value per floor, you will see lower values for buildings at that time vs before or after. Construct a chart/graph to see if she’s right.*
+
+First we calculcate the assessed value of a building by subtracting the value of the land from the total assessed value:
+```{r}
+q3 = dat %>% 
+  filter(is.na(YearBuilt)==F & YearBuilt >= 1900 & AssessLand>0 &
+           AssessTot>0) %>% 
+  filter(complete.cases(NumBldgs,NumFloors,YearBuilt)) %>% 
+  filter(NumBldgs > 0 & NumFloors > 0) %>% 
+  mutate(AssessBld = AssessTot-AssessLand) %>% 
+  filter(AssessBld>0)
+
+```
+
+As it would make sense to compare the building value only from the buildings from the same era, we'll calculate and plot the mean assessed value per floor for the three intervals:
+  
+* Buildings constructed in the ten years preceding the war
+* Buldings constructed during 1941-1945
+* Building in the ten years following the war
+  
+```{r}
+
+q3_a = q3 %>% select(YearBuilt,AssessBld, NumFloors) %>% 
+  filter(YearBuilt >=1931 & YearBuilt <=1955) %>% 
+  mutate(year_group = case_when(
+    YearBuilt < 1941 ~ "1931-1940: pre-war ",
+    YearBuilt >= 1941 & YearBuilt <=1945  ~ "1941-1945: wartime ",
+    YearBuilt > 1945 ~ "1946-1955: post-war")) 
+
+mean_year_value = q3_a %>% 
+  group_by(year_group) %>% 
+  summarise(mean_val_floor = round(mean(AssessBld/NumFloors)/1000))
+```
+
+```{r}
+
+q3_plot = ggplot(mean_year_value, aes(x=factor(year_group), y = mean_val_floor)) + 
+  geom_col() +
+  xlab('Period of construction') + ylab('Avg. assessed building value (tsd. USD)') +
+  ggtitle("Average assessed value of a building per construction period")+
+  theme_minimal()
+
+ggplotly(q3_plot)
+```
+
+We can see that the boss was right, the buildings from the wartime have a significantly lower assessed value per floor than the ones constructed immediately before or after.
+
+To put the figures in a broader context, visualize the metric for the complete dataset:
+
+```{r}
+
+floor_value_year_built = with(q3,condense(bin(YearBuilt, width=5,origin=1850),
+                                          z = (AssessBld/NumFloors)/1000,
+                                                    summary="mean"))%>% 
+  filter(complete.cases(.)&YearBuilt<2040) %>% 
+  mutate(YearBuilt = YearBuilt-2.5) # to get to the beginning of the interval
+
+q3_b_plot = ggplot(floor_value_year_built, aes(x=factor(YearBuilt), y = .mean)) + 
+  geom_col() +
+  xlab('Decade of construction') + ylab('Avg. assessed floor value (tsd. USD)') +
+  ggtitle("Average assessed value of a building floor per construction period")+
+  theme_minimal()
+
+ggplotly(q3_b_plot,width = 800)
+```
+We observe the wartime drop in value discovered above, as well a dramatic jump in value per floor for the buildings constructed between 2010 and 2015. 
+
+```{r}
+floor_values_2010 = q3 %>% 
+  filter(YearBuilt >= 2010) %>% 
+  select(Borough, NumFloors, AssessBld) %>% 
+  mutate(floor_value = (AssessBld/NumFloors)/1000)
+
+ggplot(floor_values_2010, aes(x=factor(Borough),y=floor_value))+
+  geom_boxplot() + ggtitle("Distribution of value per floor in the boroughs")
+```
+  
+We can see that there is one outlier in Brooklyn, what is it?
+
+```{r}
+q3 %>% 
+  filter(YearBuilt >= 2010, Borough=="BK") %>% 
+  mutate(floor_value = (AssessBld/NumFloors)/1000) %>% 
+  arrange(-floor_value) %>% select(Address,OwnerName,LandUse) %>% 
+  slice(1)
+```
+This is Barclays Center, which according to [Wikipedia](https://en.wikipedia.org/wiki/Barclays_Center), is "a multi-purpose indoor arena in the New York City borough of Brooklyn. The arena is part of a __$4.9 billion__ future business and residential complex now known as Pacific Park."  
+This explains the high floor value.
+  
+If we filter the dataset only to the land use categories for residential buildings (LandUse categories 1 - 3 according to the codebook), we get a more balanced view on the floor value:
+```{r}
+
+floor_value_year_built = with(q3 %>% filter(LandUse <=3),
+                              condense(bin(YearBuilt, width=5,origin=1850),
+                                          z = (AssessBld/NumFloors)/1000,
+                                                    summary="mean"))%>% 
+  filter(complete.cases(.)&YearBuilt<2040) %>% 
+  mutate(YearBuilt = YearBuilt-2.5) # to get to the beginning of the interval
+
+q3_b_plot = ggplot(floor_value_year_built, aes(x=factor(YearBuilt), y = .mean)) + 
+  geom_col() +
+  xlab('Decade of construction') + ylab('Avg. assessed floor value (tsd. USD)') +
+  ggtitle("Average assessed value of a building floor per construction period")+
+  theme_minimal()
+
+ggplotly(q3_b_plot,width = 800)
+```
+  
+### Bonus
+  
+An [interactive map of the growth of New York](https://datafeelings.carto.com/viz/ffa70e6a-9bfe-4caf-9d33-5864db69f202/embed_map): the tax lots from the dataset above are visualized in the order of building construction:
+
+![new york map][1]
+
+
+
+### Reference
  
+* http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page
+* http://www1.nyc.gov/assets/planning/download/pdf/data-maps/open-data/pluto_datadictionary.pdf?v=16v2
+* https://github.com/hadley/bigvis  
+* https://plot.ly/r/reference/  
+* http://ggplot2.tidyverse.org/reference/index.html 
+* http://rmarkdown.rstudio.com/html_document_format.html#overview
+
+[id]: figures/nyc_carto.png ""
