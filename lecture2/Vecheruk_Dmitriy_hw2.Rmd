@@ -3,21 +3,18 @@ title: "DATA 608 Homework 2"
 author: "Dmitriy Vecheruk"
 date: "9/16/2017"
 output:
-  rmdformats::html_clean:
-    highlight: kate
+  html_document:
     toc: true
     toc_float: true
-    code_folding: show
 
 ---
 
 ```{r knitr_init, echo=FALSE, cache=FALSE}
 library(knitr)
-library(rmdformats)
 
 ## Global options
 options(max.print="75")
-opts_chunk$set(echo=FALSE,
+opts_chunk$set(echo=TRUE,
 	             cache=TRUE,
                prompt=FALSE,
                tidy=TRUE,
@@ -33,7 +30,6 @@ library(ggplot2)
 library(readr)
 library(dplyr)
 library(ggthemes)
-library(rmdformats)
 ```
 
 ### Collect the data
@@ -44,34 +40,27 @@ dest_zip = "nyc_pluto_16v2.zip"
 ex_dir = "data/"
 full_data_path = paste0(ex_dir,"nyc_pluto_full.csv")
 
-# if(file.exists(full_data_path)==F){
-#   
-#   download.file(url = source_url,destfile = dest_zip,method = "auto",mode = "w")
-#   unzip(zipfile = dest_zip,exdir = ex_dir)
-#   
-#   raw_files = list.files(path = ex_dir,pattern = "*.csv",recursive = T)
-# 
-# dat = data.frame()
-# for (item in raw_files){
-#   tmp = read.csv(paste0(ex_dir,item))
-#   dat = rbind(dat, tmp)
-#   rm(tmp)
-# }
-# 
-# write_csv(dat, path = full_data_path)
-# } else {
+if(file.exists(full_data_path)==F){
+
+  download.file(url = source_url,destfile = dest_zip,method = "auto",mode = "w")
+  unzip(zipfile = dest_zip,exdir = ex_dir)
+
+  raw_files = list.files(path = ex_dir,pattern = "*.csv",recursive = T)
+
+dat = data.frame()
+for (item in raw_files){
+  tmp = read.csv(paste0(ex_dir,item))
+  dat = rbind(dat, tmp)
+  rm(tmp)
+}
+
+write_csv(dat, path = full_data_path)
+} else {
   dat = read.csv(full_data_path)
-# }
+}
 
 dat = as_tibble(dat)
 ```
-
-```{r}
-# store data for the carto map
-
-
-```
-
 
 ### Question 1  
   
@@ -219,9 +208,10 @@ floor_value_year_built = with(q3,condense(bin(YearBuilt, width=5,origin=1850),
 
 q3_b_plot = ggplot(floor_value_year_built, aes(x=factor(YearBuilt), y = .mean)) + 
   geom_col() +
-  xlab('Decade of construction') + ylab('Avg. assessed floor value (tsd. USD)') +
+  xlab('Construction period') + ylab('Avg. assessed floor value (tsd. USD)') +
   ggtitle("Average assessed value of a building floor per construction period")+
-  theme_minimal()
+  theme_minimal()+
+  theme(axis.text.x = element_text(size=8, angle=45))
 
 ggplotly(q3_b_plot,width = 800)
 ```
@@ -261,9 +251,10 @@ floor_value_year_built = with(q3 %>% filter(LandUse <=3),
 
 q3_b_plot = ggplot(floor_value_year_built, aes(x=factor(YearBuilt), y = .mean)) + 
   geom_col() +
-  xlab('Decade of construction') + ylab('Avg. assessed floor value (tsd. USD)') +
+  xlab('Construction period') + ylab('Avg. assessed floor value (tsd. USD)') +
   ggtitle("Average assessed value of a building floor per construction period")+
-  theme_minimal()
+  theme_minimal()+
+  theme(axis.text.x = element_text(size=8, angle=45))
 
 ggplotly(q3_b_plot,width = 800)
 ```
@@ -272,7 +263,7 @@ ggplotly(q3_b_plot,width = 800)
   
 An [interactive map of the growth of New York](https://datafeelings.carto.com/viz/ffa70e6a-9bfe-4caf-9d33-5864db69f202/embed_map): the tax lots from the dataset above are visualized in the order of building construction:
 
-![new york map][1]
+![][1]
 
 
 
@@ -285,4 +276,4 @@ An [interactive map of the growth of New York](https://datafeelings.carto.com/vi
 * http://ggplot2.tidyverse.org/reference/index.html 
 * http://rmarkdown.rstudio.com/html_document_format.html#overview
 
-[id]: figures/nyc_carto.png ""
+[1]: figures/nyc_carto.png ""
