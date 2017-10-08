@@ -3,8 +3,9 @@ library(shiny)
 library(shinydashboard)
 library(dplyr)
 library(plotly)
+library(markdown)
 
-# Read and prep the data
+# Read and prepare the data
 
 dat = read.csv("https://raw.githubusercontent.com/charleyferrari/CUNY_DATA608/master/lecture3/data/cleaned-cdc-mortality-1999-2010-2.csv")
 dat = dat %>% 
@@ -17,6 +18,8 @@ dat = dat %>%
   mutate(nat_avg_crude_rate = sum(crude_rate_contrib),
          nat_crude_rate_sd = sd(Crude.Rate))
 
+# Auxillary tables and variables for the charts
+
 states = unique(dat$State)
 years = unique(dat$Year)
 
@@ -27,9 +30,14 @@ cause_rank = dat %>%
 
 causes = data.frame(cause_rank %>% filter(Year == 2010) %>% arrange(cause_rank))$ICD.Chapter
 
+state_rank = dat %>% 
+  group_by(Year, ICD.Chapter) %>% 
+  mutate(state_rank = round(rank(-Crude.Rate),0)) %>% 
+  select(Year, ICD.Chapter,State,state_rank) %>% 
+  ungroup()
 
 
-# Code for the server
+##### Code for the server #####
 
 server <- function(input, output) {
   
@@ -138,14 +146,15 @@ server <- function(input, output) {
   }) # Chart rank of state over time
 }
 
-# Code for the ui
+#####  Code for the ui ##### 
 
 ui <- dashboardPage(skin = "black",
   dashboardHeader(title = "CDC Mortality Data Explorer", titleWidth = 300),
   dashboardSidebar(
     sidebarMenu(
       menuItem("Explore causes", tabName = "causes", icon = icon("heartbeat")),
-      menuItem("Compare states", tabName = "states", icon = icon("map-marker"))
+      menuItem("Compare states", tabName = "states", icon = icon("map-marker")),
+      menuItem("Reference", tabName = "reference", icon = icon("book"))
     )
   ),
   dashboardBody(
@@ -182,10 +191,6 @@ ui <- dashboardPage(skin = "black",
                 
               ),
       
-      # Add comments:
-      # reporting the death rate per 100,000 persons
-      # Source: https://wonder.cdc.gov/
-      
       # Second tab content
       tabItem(tabName = "states",
               fluidRow(
@@ -212,10 +217,18 @@ ui <- dashboardPage(skin = "black",
                     (rank 1 is highest)",
                     plotlyOutput("plot5"))
               )
-      )
+      ),
+      # Third tab content
+      tabItem(tabName = "reference",
+              fluidRow(
+                box(title = "Data source and reference",
+                    width = 12,solidHeader = TRUE,
+                    includeMarkdown("reference.md")
+                )
+              )
     )
   )
+  )
 )
-
 
 shinyApp(ui, server)
