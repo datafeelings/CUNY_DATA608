@@ -1,0 +1,177 @@
+<html>
+
+<!--
+CUNY SPS MSDA Program
+Fall Semester 2017
+DATA 608: Data Visualization
+Lecture 5 Homework Assignment
+By Dmitriy Vecheruk    
+    -->
+
+<head>
+<meta charset="utf-8">
+<title>Lecture 5 Homework Assignment</title>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.4/d3.min.js"></script>
+
+</head>
+
+<body>
+
+<h2>CUNY SPS DATA 608</h2>
+Fall Semester 2017
+<h3>Lecture 5 Homework Assignment: JavaScript and D3</h3>
+<b>By Dmitriy Vecheruk</b>
+
+
+<h4>Beginner Assignment 1: Reverse Text </h3>
+<p><i>Create a function to reverse any word that you type in. This can be typed into either an input box or an alert box, and then print the result in a box or on the webpage.</i></p>    
+
+<script type="text/javascript">
+
+function reverseText(inputText){
+    
+    let out = 'Input contains digits! Wrong input!'
+
+    if (inputText.match(/[0-9]/g)){
+        return(out)
+    } else {
+        let out = inputText.split("")
+        out = out.reverse()
+        return(out.join(""))
+    }
+}
+
+function reverseTextOutput(){
+    var t = document.getElementById("input_text1");
+    t.innerHTML = reverseText(document.getElementById('text1').value);
+} 
+
+</script>
+
+<p>
+<form>
+<fieldset>
+    <legend>Enter text:</legend>
+    <input id="text1" type="text" size="40">
+    <input type="button" value="Reverse!" onClick="reverseTextOutput();">
+<p></p>
+<div id="input_text1"></div>
+</fieldset>
+</form>
+</p>
+
+
+<h4>Beginner Assignment 2: Generate Table </h3>
+<p><i>Create a function to print the first 20 multiples of an input number, in order, in a 5x4 table.</i></p>
+
+
+
+<div id="input2">
+<p>
+<form>
+<fieldset>
+    <legend>Enter number, output rows, and output columns:</legend>
+    <input id="input2_number" type="number" size="4" value = "2">
+    <input id="input2_rows" type="number" size="4" value = "4">
+    <input id="input2_cols" type="number" size="4" value = "5">
+    <input type="button" value="Submit" onClick="renderMultiplesTable();">
+
+</p>
+<span id = "table_placeholder"></span>
+</fieldset>
+</form>
+</div>
+
+<script type="text/javascript"> 
+
+
+// Reference for the table generator: http://jsfiddle.net/p73mbuc0/2/
+
+var multiplesTable = function(){
+    
+    var inpNumber = document.getElementById('input2_number').value;
+    var nrow = document.getElementById('input2_rows').value;
+    var ncol = document.getElementById('input2_cols').value;
+    
+    var table = document.createElement('table'), tr, td, i;
+    
+
+    for (i = 0; i < nrow * ncol; i++) { 
+        if (i % nrow == 0) {
+            tr = table.appendChild(document.createElement('tr'));
+        }
+        td = tr.appendChild(document.createElement('td'));
+        td.innerHTML = inpNumber * (i + 1);
+    }
+    
+    return table;
+    //document.getElementById('input2').appendChild(table);
+     // document.getElementById('input2').replaceChild('table_placeholder',table);
+    }
+
+// Reference for the span replacement: 
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild
+
+function renderMultiplesTable(){
+    // create an empty element node
+    // without an ID, any attributes, or any content
+    var sp1 = document.createElement("span");
+
+    // give it an id attribute called 'newSpan'
+    sp1.id = "newTable";
+
+    // create some content for the new element.
+    var sp1_content = multiplesTable();
+
+    // // apply that content to the new element
+    sp1.appendChild(sp1_content);
+
+    // // build a reference to the existing node to be replaced
+    var sp2 = document.getElementById("input2").lastChild;
+    var parentDiv = sp2.parentNode;
+
+    // // replace existing node sp2 with the new span element sp1
+    parentDiv.replaceChild(sp1, sp2);
+}
+
+</script>
+
+
+
+<h4>Intermediate Assignment 1: Presidents Table </h3>
+<p><i>Write a function to load the presidents.csv data and display the data as an html table</i></p>  
+<p></p> 
+<p>The function is shown below. Works with a local file in Firefox, but does not work in Chrome due to some default settings. So instead, the CSV file is loaded from Github.</p> 
+
+<script type="text/javascript">
+
+// Reference for the table snippet: http://bl.ocks.org/ndarville/7075823
+
+var dataPath = "https://raw.githubusercontent.com/datafeelings/CUNY_DATA608/master/lecture5/js_examples/Hello%20World/data/presidents.csv"
+
+d3.text(dataPath, function(data) {
+                var parsedCSV = d3.csvParseRows(data);
+
+                var container = d3.select("body")
+                    .append("table")
+                    .style("font-family", "sans-serif")
+                    .style("border", "1px solid black")
+                    .style("padding", "15px")
+
+                    .selectAll("tr")
+                        .data(parsedCSV).enter()
+                        .append("tr")
+
+                    .selectAll("td")
+                        .data(function(d) { return d; }).enter()
+                        .append("td")
+                        .text(function(d) { return d; });
+                    
+            });
+
+</script>
+
+
+</body>
+</html>
