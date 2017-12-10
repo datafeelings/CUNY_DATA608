@@ -12,6 +12,15 @@ pd.options.mode.chained_assignment = None
 
 ## ------------- ## App data ## ------------- ##
 
+## Intro
+markdown_text_0 = """
+### Introduction
+The terms *opioid epidemic* and *overdose epidemic* have recently become much-discussed topic in the US media,
+as evidenced by the multiple recent news headlines and the following Google Trends chart:
+![opioid epidemic]()
+The deaths from drug abuse related causes have been growing strongly over the past 16 years. 
+"""
+
 ## First chart
 
 markdown_text_1 = """
@@ -176,17 +185,19 @@ deaths_dem = pd.read_csv("processed_data/deaths_dem.csv")
 ## Markdown comments for the state
 
 markdown_text_5 = """
-The dynamics of the overdose epidemic vary greatly from one state to the other.  
+The dynamics of the overdose epidemic vary greatly from one state to the other: some states have
+an increase across all demographics and urbanization types like Ohio, whereas in other states death 
+rates diverge for some age groups (e.g. in Texas) or urbanization types (e.g. in Colorado).  
 Death rates in the most of the states marked with a deeper red color in the overview map above 
 have surpassed the national median death rate in early 2000s, and have stayed at a higher level since.
 However, an additional alarming trend is visible in the eastern cluster of the most affected states: 
-all of them show a noticeable jump in the mortality starting from 2013.  
+all of them show a noticeable jump in the mortality starting from 2013. 
 It is especially visible in New Hampshire, where the death rate doubled from 2013 to 2016.
   
 Note that some of the less populous states do not have sufficient data to provide the splits by 
 demographic or urbanization, and all observations that are based on unreliably small sample sizes 
 (less than 20 persons) are marked in the charts with a * or an 
-an ![x](processed_data/x.png "Logo Title Text 1")
+an ![x](https://github.com/datafeelings/CUNY_DATA608/blob/master/Final%20Project/processed_data/x.png?raw=true "x").
 """
 
 ## Sixth chart: Explore state demographics
@@ -209,6 +220,10 @@ colors = {
 
 app.layout = html.Div([
 
+    # Title
+    html.H2('Drug overdose epidemic in the United States:'),
+    html.H3('An overview of the dynamics between 1999 and 2015'),
+    html.P('By Dmitriy Vecheruk'),
     # First chart: Deaths over time 
     dcc.Markdown(children=markdown_text_1),
     
@@ -239,7 +254,7 @@ app.layout = html.Div([
     dcc.Dropdown(
         id="state_dropdown",
         options=states_inputset,
-        value='West Virginia',
+        value='Ohio',
         className='row'),
     
     dcc.Graph(id="state_deaths_year",
