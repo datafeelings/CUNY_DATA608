@@ -16,9 +16,12 @@ pd.options.mode.chained_assignment = None
 markdown_text_0 = """
 ### Introduction
 The terms *opioid epidemic* and *overdose epidemic* have recently become much-discussed topic in the US media,
-as evidenced by the multiple recent news headlines and the following Google Trends chart:
-![opioid epidemic]()
-The deaths from drug abuse related causes have been growing strongly over the past 16 years. 
+as evidenced by the multiple recent news headlines and the following Google Trends chart:  
+
+![opioid epidemic](https://github.com/datafeelings/CUNY_DATA608/blob/master/Final%20Project/processed_data/opioid_epidemic_trends.png?raw=true)
+  
+This project investigates the national and state-level data from the CDC on deaths related to drug overdose 
+in order to provide a more detailed view on the scale and social impact of the problem.
 """
 
 ## First chart
@@ -66,8 +69,14 @@ fig_1 = dict(data=data, layout=layout)
 markdown_text_2 = """
 ### Comparison to leading non-injury causes of death
   
+However, an epidemic condition is different from a simple increase in mortalities. According to the CDC:  
+> **Epidemic** refers to an increase, often sudden, in the number of cases of a disease above 
+> what is normally expected in that population in that area. 
+  
 While the incidence for four out of five top non-injury causes of death declined between 1999 and 2015, 
-the death rate for drug overdose related causes increased almost 3 times!
+the death rate for drug overdose related causes increased almost 3 times! This observation alone is sufficient
+to call out an epidemic of overdose-related mortalities.
+
 """
 
 deaths_year_comp = pd.read_csv("processed_data/deaths_year_comp.csv")
@@ -220,10 +229,12 @@ colors = {
 
 app.layout = html.Div([
 
-    # Title
+    # Title and intro
     html.H2('Drug overdose epidemic in the United States:'),
     html.H3('An overview of the dynamics between 1999 and 2015'),
     html.P('By Dmitriy Vecheruk'),
+    dcc.Markdown(children=markdown_text_0),
+    
     # First chart: Deaths over time 
     dcc.Markdown(children=markdown_text_1),
     
