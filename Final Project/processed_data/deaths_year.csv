@@ -1,0 +1,103 @@
+Cause,Year,Deaths,Population,Age Adjusted Rate
+Drug overdose related causes,1999.0,8867.0,279040168.0,3.2
+Drug overdose related causes,2000.0,9358.0,281421906.0,3.3
+Drug overdose related causes,2001.0,10599.0,284968955.0,3.7
+Drug overdose related causes,2002.0,12659.0,287625193.0,4.4
+Drug overdose related causes,2003.0,13817.0,290107933.0,4.8
+Drug overdose related causes,2004.0,15027.0,292805298.0,5.1
+Drug overdose related causes,2005.0,16513.0,295516599.0,5.6
+Drug overdose related causes,2006.0,18625.0,298379912.0,6.2
+Drug overdose related causes,2007.0,20457.0,301231207.0,6.7
+Drug overdose related causes,2008.0,21422.0,304093966.0,7.0
+Drug overdose related causes,2009.0,22233.0,306771529.0,7.2
+Drug overdose related causes,2010.0,23973.0,308745538.0,7.7
+Drug overdose related causes,2011.0,26179.0,311591917.0,8.3
+Drug overdose related causes,2012.0,25686.0,313914040.0,8.1
+Drug overdose related causes,2013.0,26779.0,316128839.0,8.4
+Drug overdose related causes,2014.0,28125.0,318857056.0,8.7
+Drug overdose related causes,2015.0,30411.0,321418820.0,9.4
+Non-Injury: Alzheimers disease,1999.0,44536.0,279040168.0,16.5
+Non-Injury: Alzheimers disease,2000.0,49558.0,281421906.0,18.0
+Non-Injury: Alzheimers disease,2001.0,53852.0,284968955.0,19.3
+Non-Injury: Alzheimers disease,2002.0,58866.0,287625193.0,20.8
+Non-Injury: Alzheimers disease,2003.0,63457.0,290107933.0,22.1
+Non-Injury: Alzheimers disease,2004.0,65965.0,292805298.0,22.6
+Non-Injury: Alzheimers disease,2005.0,71599.0,295516599.0,24.0
+Non-Injury: Alzheimers disease,2006.0,72432.0,298379912.0,23.7
+Non-Injury: Alzheimers disease,2007.0,74632.0,301231207.0,23.8
+Non-Injury: Alzheimers disease,2008.0,82435.0,304093966.0,25.8
+Non-Injury: Alzheimers disease,2009.0,79003.0,306771529.0,24.2
+Non-Injury: Alzheimers disease,2010.0,83494.0,308745538.0,25.1
+Non-Injury: Alzheimers disease,2011.0,84974.0,311591917.0,24.7
+Non-Injury: Alzheimers disease,2012.0,83637.0,313914040.0,23.8
+Non-Injury: Alzheimers disease,2013.0,84767.0,316128839.0,23.5
+Non-Injury: Alzheimers disease,2014.0,93541.0,318857056.0,25.4
+Non-Injury: Alzheimers disease,2015.0,110561.0,321418820.0,29.4
+"Non-Injury: Cerebrovascular diseases, including stroke",1999.0,167366.0,279040168.0,61.6
+"Non-Injury: Cerebrovascular diseases, including stroke",2000.0,167661.0,281421906.0,60.9
+"Non-Injury: Cerebrovascular diseases, including stroke",2001.0,163538.0,284968955.0,58.4
+"Non-Injury: Cerebrovascular diseases, including stroke",2002.0,162672.0,287625193.0,57.3
+"Non-Injury: Cerebrovascular diseases, including stroke",2003.0,157689.0,290107933.0,54.6
+"Non-Injury: Cerebrovascular diseases, including stroke",2004.0,150074.0,292805298.0,51.2
+"Non-Injury: Cerebrovascular diseases, including stroke",2005.0,143579.0,295516599.0,48.0
+"Non-Injury: Cerebrovascular diseases, including stroke",2006.0,137119.0,298379912.0,44.8
+"Non-Injury: Cerebrovascular diseases, including stroke",2007.0,135952.0,301231207.0,43.5
+"Non-Injury: Cerebrovascular diseases, including stroke",2008.0,134148.0,304093966.0,42.1
+"Non-Injury: Cerebrovascular diseases, including stroke",2009.0,128842.0,306771529.0,39.6
+"Non-Injury: Cerebrovascular diseases, including stroke",2010.0,129476.0,308745538.0,39.1
+"Non-Injury: Cerebrovascular diseases, including stroke",2011.0,128932.0,311591917.0,37.9
+"Non-Injury: Cerebrovascular diseases, including stroke",2012.0,128546.0,313914040.0,36.9
+"Non-Injury: Cerebrovascular diseases, including stroke",2013.0,128978.0,316128839.0,36.2
+"Non-Injury: Cerebrovascular diseases, including stroke",2014.0,133103.0,318857056.0,36.5
+"Non-Injury: Cerebrovascular diseases, including stroke",2015.0,140323.0,321418820.0,37.6
+Non-Injury: Chronic lower respiratory diseases,1999.0,124181.0,279040168.0,45.4
+Non-Injury: Chronic lower respiratory diseases,2000.0,122009.0,281421906.0,44.2
+Non-Injury: Chronic lower respiratory diseases,2001.0,123013.0,284968955.0,43.9
+Non-Injury: Chronic lower respiratory diseases,2002.0,124816.0,287625193.0,43.9
+Non-Injury: Chronic lower respiratory diseases,2003.0,126382.0,290107933.0,43.7
+Non-Injury: Chronic lower respiratory diseases,2004.0,121987.0,292805298.0,41.6
+Non-Injury: Chronic lower respiratory diseases,2005.0,130933.0,295516599.0,43.9
+Non-Injury: Chronic lower respiratory diseases,2006.0,124583.0,298379912.0,41.0
+Non-Injury: Chronic lower respiratory diseases,2007.0,127924.0,301231207.0,41.3
+Non-Injury: Chronic lower respiratory diseases,2008.0,141090.0,304093966.0,44.7
+Non-Injury: Chronic lower respiratory diseases,2009.0,137353.0,306771529.0,42.7
+Non-Injury: Chronic lower respiratory diseases,2010.0,138080.0,308745538.0,42.2
+Non-Injury: Chronic lower respiratory diseases,2011.0,142943.0,311591917.0,42.5
+Non-Injury: Chronic lower respiratory diseases,2012.0,143489.0,313914040.0,41.6
+Non-Injury: Chronic lower respiratory diseases,2013.0,149205.0,316128839.0,42.1
+Non-Injury: Chronic lower respiratory diseases,2014.0,147101.0,318857056.0,40.5
+Non-Injury: Chronic lower respiratory diseases,2015.0,155041.0,321418820.0,41.6
+Non-Injury: Diseases of Heart,1999.0,725192.0,279040168.0,266.4
+Non-Injury: Diseases of Heart,2000.0,710760.0,281421906.0,257.6
+Non-Injury: Diseases of Heart,2001.0,700142.0,284968955.0,249.5
+Non-Injury: Diseases of Heart,2002.0,696947.0,287625193.0,244.7
+Non-Injury: Diseases of Heart,2003.0,685089.0,290107933.0,236.3
+Non-Injury: Diseases of Heart,2004.0,652486.0,292805298.0,221.6
+Non-Injury: Diseases of Heart,2005.0,652091.0,295516599.0,216.8
+Non-Injury: Diseases of Heart,2006.0,631636.0,298379912.0,205.5
+Non-Injury: Diseases of Heart,2007.0,616067.0,301231207.0,196.1
+Non-Injury: Diseases of Heart,2008.0,616828.0,304093966.0,192.1
+Non-Injury: Diseases of Heart,2009.0,599413.0,306771529.0,182.8
+Non-Injury: Diseases of Heart,2010.0,597689.0,308745538.0,179.1
+Non-Injury: Diseases of Heart,2011.0,596577.0,311591917.0,173.7
+Non-Injury: Diseases of Heart,2012.0,599711.0,313914040.0,170.5
+Non-Injury: Diseases of Heart,2013.0,611105.0,316128839.0,169.8
+Non-Injury: Diseases of Heart,2014.0,614348.0,318857056.0,167.0
+Non-Injury: Diseases of Heart,2015.0,633842.0,321418820.0,168.5
+Non-Injury: Malignant neoplasms (Cancers),1999.0,549838.0,279040168.0,200.8
+Non-Injury: Malignant neoplasms (Cancers),2000.0,553091.0,281421906.0,199.6
+Non-Injury: Malignant neoplasms (Cancers),2001.0,553768.0,284968955.0,196.5
+Non-Injury: Malignant neoplasms (Cancers),2002.0,557271.0,287625193.0,194.4
+Non-Injury: Malignant neoplasms (Cancers),2003.0,556902.0,290107933.0,190.9
+Non-Injury: Malignant neoplasms (Cancers),2004.0,553888.0,292805298.0,186.8
+Non-Injury: Malignant neoplasms (Cancers),2005.0,559312.0,295516599.0,185.1
+Non-Injury: Malignant neoplasms (Cancers),2006.0,559888.0,298379912.0,181.8
+Non-Injury: Malignant neoplasms (Cancers),2007.0,562875.0,301231207.0,179.3
+Non-Injury: Malignant neoplasms (Cancers),2008.0,565469.0,304093966.0,176.4
+Non-Injury: Malignant neoplasms (Cancers),2009.0,567628.0,306771529.0,173.5
+Non-Injury: Malignant neoplasms (Cancers),2010.0,574743.0,308745538.0,172.8
+Non-Injury: Malignant neoplasms (Cancers),2011.0,576691.0,311591917.0,169.0
+Non-Injury: Malignant neoplasms (Cancers),2012.0,582623.0,313914040.0,166.5
+Non-Injury: Malignant neoplasms (Cancers),2013.0,584881.0,316128839.0,163.2
+Non-Injury: Malignant neoplasms (Cancers),2014.0,591700.0,318857056.0,161.2
+Non-Injury: Malignant neoplasms (Cancers),2015.0,595930.0,321418820.0,158.5

@@ -1,0 +1,13 @@
+Cause,Year,Deaths,Population,Age Adjusted Rate,Growth since 1999
+Drug overdose related causes,1999.0,8867.0,279040168.0,3.2,
+Drug overdose related causes,2015.0,30411.0,321418820.0,9.4,193.75
+Alzheimers disease,1999.0,44536.0,279040168.0,16.5,
+Alzheimers disease,2015.0,110561.0,321418820.0,29.4,78.1818181818
+"Cerebrovascular diseases, including stroke",1999.0,167366.0,279040168.0,61.6,
+"Cerebrovascular diseases, including stroke",2015.0,140323.0,321418820.0,37.6,-38.961038961
+Chronic lower respiratory diseases,1999.0,124181.0,279040168.0,45.4,
+Chronic lower respiratory diseases,2015.0,155041.0,321418820.0,41.6,-8.37004405286
+Diseases of Heart,1999.0,725192.0,279040168.0,266.4,
+Diseases of Heart,2015.0,633842.0,321418820.0,168.5,-36.7492492492
+Malignant neoplasms (Cancers),1999.0,549838.0,279040168.0,200.8,
+Malignant neoplasms (Cancers),2015.0,595930.0,321418820.0,158.5,-21.0657370518
