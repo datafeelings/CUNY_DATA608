@@ -1,6 +1,6 @@
 # sample code to create graphs using bigvis
 # installation
-# install_packages('devtools')
+# install.packages('devtools')
 # library(devtools)
 # install_github(repo='hadley/bigvis')
 
@@ -40,4 +40,4 @@ ggplot(bin_data, aes(length, rating, fill=.count )) +
 ggplot(data=peel(bin_data), aes(length, rating, fill=.count )) + 
   geom_raster()
 
-autoplot(peel(bin_data)) + theme_tufte()
+autoplot(peel(bin_data)) + theme_few() + scale_color_few()

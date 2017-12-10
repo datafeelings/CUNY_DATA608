@@ -120,13 +120,11 @@ state_deaths = pd.read_csv("processed_data/state_deaths.csv")
 
 df = state_deaths.loc[state_deaths["Year"]==2015]
 
-scl = [
-    [6.0, 'rgb(254,229,217)'],
-    [13.0, 'rgb(252,174,145)'],
-    [16.0, 'rgb(251,106,74)'],
-    [21.0, 'rgb(222,45,38)'],
-    [45.0, 'rgb(165,15,21)']
-                 ]
+# Set up the colorscale
+
+colors = colors = ['rgb(254,240,217)','rgb(253,204,138)','rgb(252,91,89)','rgb(255,38,11)']
+levels = [0.0,0.25,0.5,1.0]
+scl = [list(item) for item in zip(levels,colors)]
 
 df['text'] = df['State']+ '<br>' +\
     'Deaths per 100k population: '+df['Age Adjusted Rate'].astype(str)
@@ -141,7 +139,7 @@ data = [ dict(
         text = df['text'],
         marker = dict(
             line = dict (
-                color = 'rgb(255,255,255)',
+                color = 'rgb(50,50,50)',
                 width = 1
             ) ),
         colorbar = dict(
@@ -162,7 +160,7 @@ fig_3 = dict( data=data, layout=layout )
 ## Fourth chart: Explore state over time
 
 markdown_text_4 = """
-### Explore data per state
+### Explore the data per state
   
 Here you can explore the rise of the drug abuse related mortality per state and identify the demographic
 groups that were affected most by the epidemic.
@@ -174,6 +172,22 @@ states_inputset = [dict(label= item, value= item) for item in states]
 ## Fifth chart: Explore state demographics
 
 deaths_dem = pd.read_csv("processed_data/deaths_dem.csv")
+
+## Markdown comments for the state
+
+markdown_text_5 = """
+The dynamics of the overdose epidemic vary greatly from one state to the other.  
+Death rates in the most of the states marked with a deeper red color in the overview map above 
+have surpassed the national median death rate in early 2000s, and have stayed at a higher level since.
+However, an additional alarming trend is visible in the eastern cluster of the most affected states: 
+all of them show a noticeable jump in the mortality starting from 2013.  
+It is especially visible in New Hampshire, where the death rate doubled from 2013 to 2016.
+  
+Note that some of the less populous states do not have sufficient data to provide the splits by 
+demographic or urbanization, and all observations that are based on unreliably small sample sizes 
+(less than 20 persons) are marked in the charts with a * or an 
+an ![x](processed_data/x.png "Logo Title Text 1")
+"""
 
 ## Sixth chart: Explore state demographics
 
@@ -217,20 +231,30 @@ app.layout = html.Div([
         figure=fig_3
     ),
     
-    # Fourth chart: Rate over time in a state
+    # State selector
     dcc.Markdown(children=markdown_text_4),
-    html.Label('Select a state'),
+    html.Label('Select a state',className='row'),
+    
+    # Fourth chart: Rate over time in a state
     dcc.Dropdown(
         id="state_dropdown",
         options=states_inputset,
-        value='West Virginia'),
-    dcc.Graph(id="state_deaths_year"),
+        value='West Virginia',
+        className='row'),
+    
+    dcc.Graph(id="state_deaths_year",
+              className='container',style={"float":"left","width":"50%"}),
     
     # Fifth chart: State rate by demographic 
-    dcc.Graph(id="deaths_dem_comp"),
+    dcc.Graph(id="deaths_dem_comp",className='container',style={"float":"right","width":"50%"}),
     
-    # Sixth chart: State rate by demographic 
-    dcc.Graph(id="urb_deaths")
+    # Markdown comments
+    html.Div([
+        dcc.Markdown(children=markdown_text_5)
+    ], className='container',style={"float":"left","width":"50%"}),
+    
+    # Sixth chart: State rate by urbanization 
+    dcc.Graph(id="urb_deaths",className='container',style={"float":"right","width":"50%"})
        
 ], style={"backgroundColor": colors["background"]})
 
@@ -248,7 +272,7 @@ def update_figure_1(selected_state):
     df = state_deaths[state_deaths["State"] == selected_state]
     x = "Year"
     y = "Age Adjusted Rate"
-    title = selected_state + ": Deaths per 100k population from drug overdose related causes: 1999 - 2015"
+    title = "Annual mortality rate related to drug overdose"
     xaxis_title=""
     yaxis_title="Deaths per 100k population"
 
@@ -291,7 +315,8 @@ def update_figure_1(selected_state):
 
     data.append(trace_median)
 
-    layout = dict(title = title,xaxis = dict(title=xaxis_title),yaxis = dict(title=yaxis_title))
+    layout = dict(title = title,xaxis = dict(title=xaxis_title),yaxis = dict(title=yaxis_title),
+                 legend=dict(xanchor='left',x=0.05))
     return dict(data=data, layout=layout)
 
 ### Update state age-gender change chart
@@ -315,7 +340,7 @@ def update_figure_2(selected_state):
     df = deaths_dem_comp[deaths_dem_comp["Year"]==2015.0].sort_values("Age Group")
     y = "Growth since 1999"
     x = "Age Group"
-    title=selected_state + ": Drug overdose mortality rate change in 2015 vs. 1999"
+    title="Drug overdose mortality rate change vs. 1999 by demographic"
     xaxis_title="Age Group"
     yaxis_title="Rate change vs. 1999"
 
@@ -342,9 +367,10 @@ def update_figure_2(selected_state):
 
     layout = dict(
         title = title, xaxis=dict(title=xaxis_title),
-        yaxis=dict(title=yaxis_title),
+        yaxis=dict(title=yaxis_title,visible=False),
         showlegend = True,
-        barmode='group'
+        barmode='group',
+        legend=dict(xanchor='left',x=0.05)
     )
     
     return dict(data=data, layout=layout)
@@ -364,7 +390,7 @@ def update_figure_3(selected_state):
     x = "Year"
     y = "Age Adjusted Rate"
     group = "2013 Urbanization Code"
-    title = selected_state + " : Deaths per 100k population from drug overdose related causes: 1999 - 2015"
+    title = "Drug overdose mortality rate in 1999 and 2015 by community type"
     xaxis_title=""
     yaxis_title="Deaths per 100k population"
 
@@ -373,12 +399,13 @@ def update_figure_3(selected_state):
     df.loc[df["aar_unreliable"]==1,"marker"] = "x"
 
     # Add colorscale
-    scl = {6:['rgb(200,249,197)',"NonCore (non-metro)"]
-           ,5:['rgb(190,235,197)',"Micropolitan (non-metro)"]
-           ,4:['rgb(168,221,181)',"Small Metro"]
-           ,3:['rgb(123,204,196)',"Medium Metro"]
-           ,2:['rgb(67,162,202)',"Large Fringe Metro"]
-           ,1:['rgb(28,104,172)',"Large Central Metro"]}
+
+    ids = [1,2,3,4,5,6]
+    colors = ['rgb(140,81,10)','rgb(216,179,101)','rgb(146,132,95)','rgb(159,204,199)','rgb(90,180,172)','rgb(1,102,94)']
+    levels = ["Large Central Metro","Large Fringe Metro","Medium Metro"
+              ,"Small Metro","Micropolitan (non-metro)","NonCore (non-metro)"]
+    col_levels = [item for item in zip(colors[::-1],levels)]
+    scl = dict(zip(ids,col_levels))
 
     groups = sorted(list(df[group].unique()))
     data = []

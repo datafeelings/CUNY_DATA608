@@ -1,38 +1,23 @@
 <html>
 
 <!--
-    
-    Note to Students:
+CUNY SPS MSDA Program
+Fall Semester 2017
+DATA 608: Data Visualization
+Lecture 5 Homework Assignment
+By Dmitriy Vecheruk    
+    -->
 
-        This is a very short introduction to using Javascript in the browser.
+<head>
+<title>Lecture 5 Homework Assignment</title>
 
-        To see this as a webpage, you have to start a *Local Web Server*. There are many ways to do this: since you all have python installed, we will use python.
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.4/d3.min.js"></script>
 
-        - Open terminal
-
-        - 'cd' into the directory where this html file is (js_in_webpage.html)
-
-        - Type the following into the terminal and hit 'enter':
-            python -m SimpleHTTPServer
-
-            your server should read something like: Serving HTTP on 0.0.0.0 port 8000 ...
-
-        - now go to any browser and type in the HTTP address and the filename: something like:
-
-            http://0.0.0.0:8000/js_in_webpage.html
-
-            or
-
-            http://localhost:8000/js_in_webpage.html
-        
-        - Congrats: you now have a local HTTP server running. Now, every time you change this file and save it, when you reload the browser you will see your changes!
--->
-
-<head><title>Lecture 5 Homework Assignment</title></head>
+</head>
 
 <body>
 
-
+<!--   Page JavaScript Content  -->
 
 <script type="text/javascript">
 
@@ -56,87 +41,20 @@ function reverseTextOutput(){
 
 </script>
 
-<script type="text/javascript">
+<script type="text/javascript"> 
+var inpNumber = 5;
 
-// Here are some examples of things that you might want to do with Javascript
-
-// writing to a document directly
-
-document.write('<p><b>While you are working in Javascript (or any language), it is really important to be able to debug. Some browsers offer very simple ways to see what is happening on a page.</b></p>');
-document.write('<p>Chrome and Firefox in particular offer good Developer Tools and Javascript console access</p><br>');
+var returnNum = function(){
+        d3.select("body")
+        .data(inpNumber)
+        .append("p")
+        .text(d => d);
+        }
 </script>
 
-<script type="text/javascript">
+<!-- Page HTML Content -->
 
-// Find this bug in the console and fix it!
-
-document.write('<p>These are really helpful for finding bugs!</p><br>');
-</script>
-
-
-<script type="text/javascript">
-
-// Variables and Math:
-
-var num1 = '5';
-var num2 = '5';
-var answer;
-
-answer = +num1 + +num2
-
-document.write(num1 + ' plus ' + num2 + '= ' + answer );
-
-document.write('<p>An example of a random number would be ' + Math.random() + '</p>');
-
-var rightNow = new Date();
-
-document.write('<p>Right now it is ' + rightNow + '<p>');
-
-</script>
-
-
-<script type="text/javascript">
-
-document.write('<br><p>Is a number even or odd, is it divisible by 3?')
-
-// Basic functions
-
-function divis(num,d){
-    var evenOdd = 'odd';
-    if (num%2 == 0) {evenOdd = 'even';};
-
-    var ddiv = false;
-    if (num%d == 0) {ddiv = true;};
-
-    var dtext; 
-    if (ddiv==true){dtext = 'is '} else (dtext = 'is not ');
-
-    var str;
-    str = num + ' is ' + evenOdd +' and ' + dtext + 'divisible by ' + d;
-    
-    return(str);
-};
-
-function calc(){
-    var t = document.getElementById("target");
-    t.innerHTML = divis(document.getElementById('num').value, 3);
-}
-</script>
-
-<p>
-<form>
-    <input id="num" type="number" size="4">
-    <input type="button" value="check" onClick="calc();">
-</form>
-</p>
-
-<div id="target"></div>
-
-<script type="text/javascript" src="other_script.js"></script>
-
-<script type="text/javascript"> document.write(myScript());</script>
-
-<h2>CUNY DATA 608</h2>
+<h2>CUNY SPS DATA 608</h2>
 Fall Semester 2017
 <h3>Lecture 5 Homework Assignment: JavaScript and D3</h3>
 <b>By Dmitriy Vecheruk</b>
@@ -157,7 +75,49 @@ Fall Semester 2017
 </form>
 </p>
 
+<p>
+<form>
+    <input id="number1" type="number" size="4">
+    <input type="button" value="check" onClick="returnNum();">
+</form>
+</p>
 
+<div id="target"></div>
+
+
+<h4>Intermediate Assignment 1: Presidents Table </h3>
+<p>Write a function to load the presidents.csv data and display the data as an html table</p>  
+
+<h1>CLICK HERE</h1>
+
+
+<script type="text/javascript">
+
+// Source for the table snippet: http://bl.ocks.org/ndarville/7075823
+
+d3.text("data/presidents.csv", function(data) {
+                var parsedCSV = d3.csvParseRows(data);
+
+                var container = d3.select("body")
+                    .append("table")
+
+                    .selectAll("tr")
+                        .data(parsedCSV).enter()
+                        .append("tr")
+
+                    .selectAll("td")
+                        .data(function(d) { return d; }).enter()
+                        .append("td")
+                        .text(function(d) { return d; });
+            });
+
+
+d3.select("p")
+.on("click", function(){ 
+    alert("tadaa");
+});
+
+</script>
 
 </body>
 </html>
