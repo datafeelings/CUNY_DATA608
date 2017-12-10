@@ -18,7 +18,7 @@ markdown_text_0 = """
 The terms *opioid epidemic* and *overdose epidemic* have recently become much-discussed topic in the US media,
 as evidenced by the multiple recent news headlines and the following Google Trends chart:  
 
-![opioid epidemic](https://github.com/datafeelings/CUNY_DATA608/blob/master/Final%20Project/processed_data/opioid_epidemic_trends.png?raw=true)
+![opioid epidemic](https://github.com/datafeelings/CUNY_DATA608/blob/master/Final%20Project/processed_data/opioid_image.png?raw=true)
   
 This project investigates the national and state-level data from the CDC on deaths related to drug overdose 
 in order to provide a more detailed view on the scale and social impact of the problem.
