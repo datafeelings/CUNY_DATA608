@@ -1,0 +1,96 @@
+"Notes"	"ICD Chapter"	"ICD Chapter Code"	"Year"	"Year Code"	Deaths	Population	Crude Rate	Age Adjusted Rate
+	"External causes of morbidity and mortality"	"V01-Y89"	"1999"	"1999"	8867	279040168	3.2	3.2
+	"External causes of morbidity and mortality"	"V01-Y89"	"2000"	"2000"	9358	281421906	3.3	3.3
+	"External causes of morbidity and mortality"	"V01-Y89"	"2001"	"2001"	10599	284968955	3.7	3.7
+	"External causes of morbidity and mortality"	"V01-Y89"	"2002"	"2002"	12659	287625193	4.4	4.4
+	"External causes of morbidity and mortality"	"V01-Y89"	"2003"	"2003"	13817	290107933	4.8	4.8
+	"External causes of morbidity and mortality"	"V01-Y89"	"2004"	"2004"	15027	292805298	5.1	5.1
+	"External causes of morbidity and mortality"	"V01-Y89"	"2005"	"2005"	16513	295516599	5.6	5.6
+	"External causes of morbidity and mortality"	"V01-Y89"	"2006"	"2006"	18625	298379912	6.2	6.2
+	"External causes of morbidity and mortality"	"V01-Y89"	"2007"	"2007"	20457	301231207	6.8	6.7
+	"External causes of morbidity and mortality"	"V01-Y89"	"2008"	"2008"	21422	304093966	7.0	7.0
+	"External causes of morbidity and mortality"	"V01-Y89"	"2009"	"2009"	22233	306771529	7.2	7.2
+	"External causes of morbidity and mortality"	"V01-Y89"	"2010"	"2010"	23973	308745538	7.8	7.7
+	"External causes of morbidity and mortality"	"V01-Y89"	"2011"	"2011"	26179	311591917	8.4	8.3
+	"External causes of morbidity and mortality"	"V01-Y89"	"2012"	"2012"	25686	313914040	8.2	8.1
+	"External causes of morbidity and mortality"	"V01-Y89"	"2013"	"2013"	26779	316128839	8.5	8.4
+	"External causes of morbidity and mortality"	"V01-Y89"	"2014"	"2014"	28125	318857056	8.8	8.7
+	"External causes of morbidity and mortality"	"V01-Y89"	"2015"	"2015"	30411	321418820	9.5	9.4
+"---"
+"Dataset: Compressed Mortality, 1999-2015"
+"Query Parameters:"
+"Title:"
+"2013 Urbanization: All"
+"Age Group: All"
+"Gender: All"
+"Hispanic Origin: All"
+"ICD-10 113 Groups: Accidental poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic"
+"drugs, not elsewhere classified (X41), Accidental poisoning by and exposure to other drugs acting on the autonomic nervous"
+"system (X43), Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances (X44),"
+"Intentional self-poisoning by and exposure to nonopioid analgesics, antipyretics and antirheumatics (X60), Intentional"
+"self-poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere"
+"classified (X61), Intentional self-poisoning by and exposure to other drugs acting on the autonomic nervous system (X63),"
+"Intentional self-poisoning by and exposure to other and unspecified drugs, medicaments and biological substances (X64), Assault"
+"by drugs, medicaments and biological substances (X85), Poisoning by and exposure to nonopioid analgesics, antipyretics and"
+"antirheumatics, undetermined intent (Y10), Poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and"
+"psychotropic drugs, not elsewhere classified, undetermined intent (Y11), Poisoning by and exposure to other drugs acting on the"
+"autonomic nervous system, undetermined intent (Y13), Poisoning by and exposure to other and unspecified drugs, medicaments and"
+"biological substances, undetermined intent (Y14)"
+"Race: All"
+"States: All"
+"Year: All, 1999 to 2015"
+"Group By: ICD Chapter, Year"
+"Show Totals: False"
+"Show Zero Values: True"
+"Show Suppressed: False"
+"Standard Population: 2000 U.S. Std. Population"
+"Calculate Rates Per: 100,000"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/cmf.html for more information."
+"---"
+"Query Date: Dec 3, 2017 9:27:17 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. Compressed Mortality File"
+"1999-2015 on CDC WONDER Online Database, released December 2016. Data are from the Compressed Mortality File 1999-2015 Series 20"
+"No. 2U, 2016, as compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative"
+"Program. Accessed at http://wonder.cdc.gov/cmf-icd10.html on Dec 3, 2017 9:27:17 AM"
+"---"
+Messages:
+"1. Selections made to any variable in [ICD-10 Codes, ICD-10 113 Groups] cause equivalent selections in the other variables. More"
+"Information: http://wonder.cdc.gov/wonder/help/faq.html#related-variables."
+"---"
+Caveats:
+"1. About national population figures: population figures for 1999 are from the 1990-1999 series of bridged-race intercensal"
+"estimates of the July 1 resident population; population figures for 2000 and 2010 are bridged-race April 1 census counts;"
+"population figures for 2001-2009 are from the revised 2000-2009 series of bridged-race intercensal estimates of the July 1"
+"resident population; population figures for 2011 are bridged-race postcensal estimates of the July 1 resident population, from"
+"the Vintage 2011 series released by NCHS on July 18, 2012; population figures for 2012 are bridged-race postcensal estimates of"
+"the July 1 resident population, from the Vintage 2012 series released by NCHS on June 13, 2013; population figures for 2013 are"
+"bridged-race postcensal estimates of the July 1 resident population, from the Vintage 2013 series released by NCHS on June 26,"
+"2014; population figures for 2014 are bridged-race postcensal estimates of the July 1 resident population, from the Vintage 2014"
+"series released by NCHS on June 30, 2015. and population figures for 2015 are bridged-race postcensal estimates of the July 1"
+"resident population, from the Vintage 2015 series released by NCHS on June 28, 2016. More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#Population Information."
+"2. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/cmf.html#Age Group."
+"3. The populations used to calculate standard age-adjusted rates are documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#2000 Standard Population."
+"4. The method used to calculate age-adjusted rates is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#Age-Adjusted Rates."
+"5. Deaths for persons of unknown age are included in counts and crude rates, but are not included in age-adjusted rates."
+"6. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#ICD-10 Changes."
+"7. These items in the results table are not fully selected: External causes of morbidity and mortality. The Query Description"
+"lists the actual values selected."
+"8. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#2014-Revision."
+"9. Circumstances in California resulted in unusually high death counts for the ICD-10 cause of death code R99, ""Other"
+"ill-defined and unspecified causes of mortality"" for deaths occurring in years 2000 and 2001. Caution should be used in"
+"interpreting these data. More information: http://wonder.cdc.gov/wonder/help/cmf.html#California-Reporting-Anomalies."
+"10. Circumstances in Georgia for the years 2008-2009 have resulted in unusually high death counts for the ICD-10 cause of death"
+"code R99, ""Other ill-defined and unspecified causes of mortality."" Caution should be used in interpreting these data. More"
+"information: http://wonder.cdc.gov/wonder/help/cmf.html#Georgia-Reporting-Anomalies."
+"11. Circumstances in New Jersey for the year 2009 have resulted in unusually high death counts for the ICD-10 cause of death"
+"code R99, ""Other ill-defined and unspecified causes of mortality"" and therefore unusually low death counts in other ICD-10"
+"codes, most notably R95, ""Sudden Infant Death Syndrome"" and X40-X49, ""Unintentional poisoning."" Caution should be used in"
+"interpreting these data. More information: http://wonder.cdc.gov/wonder/help/cmf.html#New-Jersey-Reporting-Anomalies."

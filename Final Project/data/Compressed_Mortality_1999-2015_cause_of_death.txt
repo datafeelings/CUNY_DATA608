@@ -1,0 +1,732 @@
+"Notes"	"Injury Mechanism & All Other Leading Causes"	"Injury Mechanism & All Other Leading Causes Code"	"Year"	"Year Code"	Deaths	Population	Crude Rate	Age Adjusted Rate
+	"Cut/Pierce"	"GRINJ-001"	"1999"	"1999"	2369	279040168	0.8	0.8
+	"Cut/Pierce"	"GRINJ-001"	"2000"	"2000"	2288	281421906	0.8	0.8
+	"Cut/Pierce"	"GRINJ-001"	"2001"	"2001"	2532	284968955	0.9	0.9
+	"Cut/Pierce"	"GRINJ-001"	"2002"	"2002"	2762	287625193	1.0	1.0
+	"Cut/Pierce"	"GRINJ-001"	"2003"	"2003"	2742	290107933	0.9	0.9
+	"Cut/Pierce"	"GRINJ-001"	"2004"	"2004"	2799	292805298	1.0	1.0
+	"Cut/Pierce"	"GRINJ-001"	"2005"	"2005"	2795	295516599	0.9	0.9
+	"Cut/Pierce"	"GRINJ-001"	"2006"	"2006"	2831	298379912	0.9	0.9
+	"Cut/Pierce"	"GRINJ-001"	"2007"	"2007"	2734	301231207	0.9	0.9
+	"Cut/Pierce"	"GRINJ-001"	"2008"	"2008"	2808	304093966	0.9	0.9
+	"Cut/Pierce"	"GRINJ-001"	"2009"	"2009"	2688	306771529	0.9	0.9
+	"Cut/Pierce"	"GRINJ-001"	"2010"	"2010"	2598	308745538	0.8	0.8
+	"Cut/Pierce"	"GRINJ-001"	"2011"	"2011"	2587	311591917	0.8	0.8
+	"Cut/Pierce"	"GRINJ-001"	"2012"	"2012"	2648	313914040	0.8	0.8
+	"Cut/Pierce"	"GRINJ-001"	"2013"	"2013"	2576	316128839	0.8	0.8
+	"Cut/Pierce"	"GRINJ-001"	"2014"	"2014"	2609	318857056	0.8	0.8
+	"Cut/Pierce"	"GRINJ-001"	"2015"	"2015"	2531	321418820	0.8	0.8
+	"Drowning"	"GRINJ-002"	"1999"	"1999"	4153	279040168	1.5	1.5
+	"Drowning"	"GRINJ-002"	"2000"	"2000"	4073	281421906	1.4	1.4
+	"Drowning"	"GRINJ-002"	"2001"	"2001"	3923	284968955	1.4	1.4
+	"Drowning"	"GRINJ-002"	"2002"	"2002"	4146	287625193	1.4	1.4
+	"Drowning"	"GRINJ-002"	"2003"	"2003"	3919	290107933	1.4	1.3
+	"Drowning"	"GRINJ-002"	"2004"	"2004"	3952	292805298	1.3	1.3
+	"Drowning"	"GRINJ-002"	"2005"	"2005"	4248	295516599	1.4	1.4
+	"Drowning"	"GRINJ-002"	"2006"	"2006"	4279	298379912	1.4	1.4
+	"Drowning"	"GRINJ-002"	"2007"	"2007"	4086	301231207	1.4	1.3
+	"Drowning"	"GRINJ-002"	"2008"	"2008"	4251	304093966	1.4	1.4
+	"Drowning"	"GRINJ-002"	"2009"	"2009"	4211	306771529	1.4	1.4
+	"Drowning"	"GRINJ-002"	"2010"	"2010"	4521	308745538	1.5	1.4
+	"Drowning"	"GRINJ-002"	"2011"	"2011"	4245	311591917	1.4	1.4
+	"Drowning"	"GRINJ-002"	"2012"	"2012"	4308	313914040	1.4	1.4
+	"Drowning"	"GRINJ-002"	"2013"	"2013"	4056	316128839	1.3	1.3
+	"Drowning"	"GRINJ-002"	"2014"	"2014"	3995	318857056	1.3	1.2
+	"Drowning"	"GRINJ-002"	"2015"	"2015"	4425	321418820	1.4	1.4
+	"Fall"	"GRINJ-003"	"1999"	"1999"	13931	279040168	5.0	5.1
+	"Fall"	"GRINJ-003"	"2000"	"2000"	14002	281421906	5.0	5.1
+	"Fall"	"GRINJ-003"	"2001"	"2001"	15764	284968955	5.5	5.6
+	"Fall"	"GRINJ-003"	"2002"	"2002"	17116	287625193	6.0	6.0
+	"Fall"	"GRINJ-003"	"2003"	"2003"	18044	290107933	6.2	6.2
+	"Fall"	"GRINJ-003"	"2004"	"2004"	19571	292805298	6.7	6.7
+	"Fall"	"GRINJ-003"	"2005"	"2005"	20426	295516599	6.9	6.8
+	"Fall"	"GRINJ-003"	"2006"	"2006"	21647	298379912	7.3	7.1
+	"Fall"	"GRINJ-003"	"2007"	"2007"	23443	301231207	7.8	7.5
+	"Fall"	"GRINJ-003"	"2008"	"2008"	24820	304093966	8.2	7.8
+	"Fall"	"GRINJ-003"	"2009"	"2009"	25562	306771529	8.3	7.9
+	"Fall"	"GRINJ-003"	"2010"	"2010"	26852	308745538	8.7	8.1
+	"Fall"	"GRINJ-003"	"2011"	"2011"	28360	311591917	9.1	8.3
+	"Fall"	"GRINJ-003"	"2012"	"2012"	29776	313914040	9.5	8.6
+	"Fall"	"GRINJ-003"	"2013"	"2013"	31240	316128839	9.9	8.8
+	"Fall"	"GRINJ-003"	"2014"	"2014"	33018	318857056	10.4	9.1
+	"Fall"	"GRINJ-003"	"2015"	"2015"	34488	321418820	10.7	9.3
+	"Fire/Flame"	"GRINJ-004"	"1999"	"1999"	3779	279040168	1.4	1.4
+	"Fire/Flame"	"GRINJ-004"	"2000"	"2000"	3789	281421906	1.3	1.4
+	"Fire/Flame"	"GRINJ-004"	"2001"	"2001"	3673	284968955	1.3	1.3
+	"Fire/Flame"	"GRINJ-004"	"2002"	"2002"	3539	287625193	1.2	1.2
+	"Fire/Flame"	"GRINJ-004"	"2003"	"2003"	3782	290107933	1.3	1.3
+	"Fire/Flame"	"GRINJ-004"	"2004"	"2004"	3627	292805298	1.2	1.2
+	"Fire/Flame"	"GRINJ-004"	"2005"	"2005"	3626	295516599	1.2	1.2
+	"Fire/Flame"	"GRINJ-004"	"2006"	"2006"	3577	298379912	1.2	1.2
+	"Fire/Flame"	"GRINJ-004"	"2007"	"2007"	3680	301231207	1.2	1.2
+	"Fire/Flame"	"GRINJ-004"	"2008"	"2008"	3297	304093966	1.1	1.1
+	"Fire/Flame"	"GRINJ-004"	"2009"	"2009"	3125	306771529	1.0	1.0
+	"Fire/Flame"	"GRINJ-004"	"2010"	"2010"	3127	308745538	1.0	1.0
+	"Fire/Flame"	"GRINJ-004"	"2011"	"2011"	3100	311591917	1.0	0.9
+	"Fire/Flame"	"GRINJ-004"	"2012"	"2012"	2848	313914040	0.9	0.9
+	"Fire/Flame"	"GRINJ-004"	"2013"	"2013"	3160	316128839	1.0	0.9
+	"Fire/Flame"	"GRINJ-004"	"2014"	"2014"	3122	318857056	1.0	0.9
+	"Fire/Flame"	"GRINJ-004"	"2015"	"2015"	3080	321418820	1.0	0.9
+	"Hot object/Substance"	"GRINJ-005"	"1999"	"1999"	131	279040168	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2000"	"2000"	118	281421906	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2001"	"2001"	123	284968955	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2002"	"2002"	106	287625193	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2003"	"2003"	93	290107933	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2004"	"2004"	101	292805298	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2005"	"2005"	110	295516599	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2006"	"2006"	98	298379912	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2007"	"2007"	94	301231207	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2008"	"2008"	85	304093966	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2009"	"2009"	70	306771529	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2010"	"2010"	67	308745538	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2011"	"2011"	72	311591917	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2012"	"2012"	63	313914040	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2013"	"2013"	60	316128839	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2014"	"2014"	74	318857056	0.0	0.0
+	"Hot object/Substance"	"GRINJ-005"	"2015"	"2015"	66	321418820	0.0	0.0
+	"Firearm"	"GRINJ-006"	"1999"	"1999"	28575	279040168	10.2	10.2
+	"Firearm"	"GRINJ-006"	"2000"	"2000"	28393	281421906	10.1	10.1
+	"Firearm"	"GRINJ-006"	"2001"	"2001"	29250	284968955	10.3	10.2
+	"Firearm"	"GRINJ-006"	"2002"	"2002"	29942	287625193	10.4	10.4
+	"Firearm"	"GRINJ-006"	"2003"	"2003"	29789	290107933	10.3	10.2
+	"Firearm"	"GRINJ-006"	"2004"	"2004"	29258	292805298	10.0	9.9
+	"Firearm"	"GRINJ-006"	"2005"	"2005"	30364	295516599	10.3	10.2
+	"Firearm"	"GRINJ-006"	"2006"	"2006"	30536	298379912	10.2	10.1
+	"Firearm"	"GRINJ-006"	"2007"	"2007"	30873	301231207	10.2	10.1
+	"Firearm"	"GRINJ-006"	"2008"	"2008"	31267	304093966	10.3	10.1
+	"Firearm"	"GRINJ-006"	"2009"	"2009"	31014	306771529	10.1	10.0
+	"Firearm"	"GRINJ-006"	"2010"	"2010"	31328	308745538	10.1	10.0
+	"Firearm"	"GRINJ-006"	"2011"	"2011"	31897	311591917	10.2	10.1
+	"Firearm"	"GRINJ-006"	"2012"	"2012"	33092	313914040	10.5	10.3
+	"Firearm"	"GRINJ-006"	"2013"	"2013"	33168	316128839	10.5	10.3
+	"Firearm"	"GRINJ-006"	"2014"	"2014"	33130	318857056	10.4	10.1
+	"Firearm"	"GRINJ-006"	"2015"	"2015"	35763	321418820	11.1	10.9
+	"Machinery"	"GRINJ-007"	"1999"	"1999"	622	279040168	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2000"	"2000"	676	281421906	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2001"	"2001"	648	284968955	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2002"	"2002"	652	287625193	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2003"	"2003"	640	290107933	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2004"	"2004"	795	292805298	0.3	0.3
+	"Machinery"	"GRINJ-007"	"2005"	"2005"	755	295516599	0.3	0.3
+	"Machinery"	"GRINJ-007"	"2006"	"2006"	740	298379912	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2007"	"2007"	659	301231207	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2008"	"2008"	693	304093966	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2009"	"2009"	608	306771529	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2010"	"2010"	590	308745538	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2011"	"2011"	610	311591917	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2012"	"2012"	627	313914040	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2013"	"2013"	588	316128839	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2014"	"2014"	605	318857056	0.2	0.2
+	"Machinery"	"GRINJ-007"	"2015"	"2015"	550	321418820	0.2	0.2
+	"Motor Vehicle Traffic"	"GRINJ-008"	"1999"	"1999"	40965	279040168	14.7	14.7
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2000"	"2000"	41994	281421906	14.9	14.9
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2001"	"2001"	42443	284968955	14.9	14.8
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2002"	"2002"	44065	287625193	15.3	15.2
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2003"	"2003"	43340	290107933	14.9	14.9
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2004"	"2004"	43432	292805298	14.8	14.7
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2005"	"2005"	43667	295516599	14.8	14.6
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2006"	"2006"	43664	298379912	14.6	14.5
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2007"	"2007"	42031	301231207	14.0	13.8
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2008"	"2008"	37985	304093966	12.5	12.3
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2009"	"2009"	34485	306771529	11.2	11.1
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2010"	"2010"	33687	308745538	10.9	10.7
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2011"	"2011"	33783	311591917	10.8	10.6
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2012"	"2012"	34935	313914040	11.1	10.9
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2013"	"2013"	33804	316128839	10.7	10.5
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2014"	"2014"	33736	318857056	10.6	10.3
+	"Motor Vehicle Traffic"	"GRINJ-008"	"2015"	"2015"	36161	321418820	11.3	10.9
+	"Other Pedal cyclist"	"GRINJ-009"	"1999"	"1999"	185	279040168	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2000"	"2000"	168	281421906	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2001"	"2001"	207	284968955	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2002"	"2002"	217	287625193	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2003"	"2003"	190	290107933	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2004"	"2004"	206	292805298	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2005"	"2005"	227	295516599	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2006"	"2006"	238	298379912	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2007"	"2007"	242	301231207	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2008"	"2008"	311	304093966	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2009"	"2009"	256	306771529	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2010"	"2010"	242	308745538	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2011"	"2011"	272	311591917	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2012"	"2012"	290	313914040	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2013"	"2013"	302	316128839	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2014"	"2014"	279	318857056	0.1	0.1
+	"Other Pedal cyclist"	"GRINJ-009"	"2015"	"2015"	338	321418820	0.1	0.1
+	"Other Pedestrian"	"GRINJ-010"	"1999"	"1999"	1502	279040168	0.5	0.5
+	"Other Pedestrian"	"GRINJ-010"	"2000"	"2000"	1272	281421906	0.5	0.5
+	"Other Pedestrian"	"GRINJ-010"	"2001"	"2001"	1249	284968955	0.4	0.4
+	"Other Pedestrian"	"GRINJ-010"	"2002"	"2002"	1050	287625193	0.4	0.4
+	"Other Pedestrian"	"GRINJ-010"	"2003"	"2003"	1040	290107933	0.4	0.4
+	"Other Pedestrian"	"GRINJ-010"	"2004"	"2004"	1137	292805298	0.4	0.4
+	"Other Pedestrian"	"GRINJ-010"	"2005"	"2005"	1157	295516599	0.4	0.4
+	"Other Pedestrian"	"GRINJ-010"	"2006"	"2006"	1141	298379912	0.4	0.4
+	"Other Pedestrian"	"GRINJ-010"	"2007"	"2007"	1138	301231207	0.4	0.4
+	"Other Pedestrian"	"GRINJ-010"	"2008"	"2008"	1089	304093966	0.4	0.4
+	"Other Pedestrian"	"GRINJ-010"	"2009"	"2009"	1110	306771529	0.4	0.4
+	"Other Pedestrian"	"GRINJ-010"	"2010"	"2010"	1074	308745538	0.3	0.3
+	"Other Pedestrian"	"GRINJ-010"	"2011"	"2011"	897	311591917	0.3	0.3
+	"Other Pedestrian"	"GRINJ-010"	"2012"	"2012"	943	313914040	0.3	0.3
+	"Other Pedestrian"	"GRINJ-010"	"2013"	"2013"	985	316128839	0.3	0.3
+	"Other Pedestrian"	"GRINJ-010"	"2014"	"2014"	1032	318857056	0.3	0.3
+	"Other Pedestrian"	"GRINJ-010"	"2015"	"2015"	959	321418820	0.3	0.3
+	"Other land transport"	"GRINJ-011"	"1999"	"1999"	2090	279040168	0.7	0.7
+	"Other land transport"	"GRINJ-011"	"2000"	"2000"	1662	281421906	0.6	0.6
+	"Other land transport"	"GRINJ-011"	"2001"	"2001"	1493	284968955	0.5	0.5
+	"Other land transport"	"GRINJ-011"	"2002"	"2002"	1333	287625193	0.5	0.5
+	"Other land transport"	"GRINJ-011"	"2003"	"2003"	1716	290107933	0.6	0.6
+	"Other land transport"	"GRINJ-011"	"2004"	"2004"	1537	292805298	0.5	0.5
+	"Other land transport"	"GRINJ-011"	"2005"	"2005"	1710	295516599	0.6	0.6
+	"Other land transport"	"GRINJ-011"	"2006"	"2006"	1647	298379912	0.6	0.5
+	"Other land transport"	"GRINJ-011"	"2007"	"2007"	1800	301231207	0.6	0.6
+	"Other land transport"	"GRINJ-011"	"2008"	"2008"	1728	304093966	0.6	0.6
+	"Other land transport"	"GRINJ-011"	"2009"	"2009"	1581	306771529	0.5	0.5
+	"Other land transport"	"GRINJ-011"	"2010"	"2010"	1524	308745538	0.5	0.5
+	"Other land transport"	"GRINJ-011"	"2011"	"2011"	1541	311591917	0.5	0.5
+	"Other land transport"	"GRINJ-011"	"2012"	"2012"	1467	313914040	0.5	0.5
+	"Other land transport"	"GRINJ-011"	"2013"	"2013"	1521	316128839	0.5	0.5
+	"Other land transport"	"GRINJ-011"	"2014"	"2014"	1591	318857056	0.5	0.5
+	"Other land transport"	"GRINJ-011"	"2015"	"2015"	1625	321418820	0.5	0.5
+	"Other transport"	"GRINJ-012"	"1999"	"1999"	1408	279040168	0.5	0.5
+	"Other transport"	"GRINJ-012"	"2000"	"2000"	1413	281421906	0.5	0.5
+	"Other transport"	"GRINJ-012"	"2001"	"2001"	1513	284968955	0.5	0.5
+	"Other transport"	"GRINJ-012"	"2002"	"2002"	1273	287625193	0.4	0.4
+	"Other transport"	"GRINJ-012"	"2003"	"2003"	1317	290107933	0.5	0.4
+	"Other transport"	"GRINJ-012"	"2004"	"2004"	1253	292805298	0.4	0.4
+	"Other transport"	"GRINJ-012"	"2005"	"2005"	1133	295516599	0.4	0.4
+	"Other transport"	"GRINJ-012"	"2006"	"2006"	1188	298379912	0.4	0.4
+	"Other transport"	"GRINJ-012"	"2007"	"2007"	1039	301231207	0.3	0.3
+	"Other transport"	"GRINJ-012"	"2008"	"2008"	981	304093966	0.3	0.3
+	"Other transport"	"GRINJ-012"	"2009"	"2009"	1006	306771529	0.3	0.3
+	"Other transport"	"GRINJ-012"	"2010"	"2010"	875	308745538	0.3	0.3
+	"Other transport"	"GRINJ-012"	"2011"	"2011"	1027	311591917	0.3	0.3
+	"Other transport"	"GRINJ-012"	"2012"	"2012"	855	313914040	0.3	0.3
+	"Other transport"	"GRINJ-012"	"2013"	"2013"	815	316128839	0.3	0.2
+	"Other transport"	"GRINJ-012"	"2014"	"2014"	806	318857056	0.3	0.2
+	"Other transport"	"GRINJ-012"	"2015"	"2015"	857	321418820	0.3	0.3
+	"Natural/Environmental"	"GRINJ-013"	"1999"	"1999"	1923	279040168	0.7	0.7
+	"Natural/Environmental"	"GRINJ-013"	"2000"	"2000"	1643	281421906	0.6	0.6
+	"Natural/Environmental"	"GRINJ-013"	"2001"	"2001"	1427	284968955	0.5	0.5
+	"Natural/Environmental"	"GRINJ-013"	"2002"	"2002"	1554	287625193	0.5	0.5
+	"Natural/Environmental"	"GRINJ-013"	"2003"	"2003"	1420	290107933	0.5	0.5
+	"Natural/Environmental"	"GRINJ-013"	"2004"	"2004"	1359	292805298	0.5	0.4
+	"Natural/Environmental"	"GRINJ-013"	"2005"	"2005"	2462	295516599	0.8	0.8
+	"Natural/Environmental"	"GRINJ-013"	"2006"	"2006"	1588	298379912	0.5	0.5
+	"Natural/Environmental"	"GRINJ-013"	"2007"	"2007"	1449	301231207	0.5	0.5
+	"Natural/Environmental"	"GRINJ-013"	"2008"	"2008"	1409	304093966	0.5	0.4
+	"Natural/Environmental"	"GRINJ-013"	"2009"	"2009"	1327	306771529	0.4	0.4
+	"Natural/Environmental"	"GRINJ-013"	"2010"	"2010"	1576	308745538	0.5	0.5
+	"Natural/Environmental"	"GRINJ-013"	"2011"	"2011"	2193	311591917	0.7	0.7
+	"Natural/Environmental"	"GRINJ-013"	"2012"	"2012"	1456	313914040	0.5	0.4
+	"Natural/Environmental"	"GRINJ-013"	"2013"	"2013"	1535	316128839	0.5	0.4
+	"Natural/Environmental"	"GRINJ-013"	"2014"	"2014"	1625	318857056	0.5	0.5
+	"Natural/Environmental"	"GRINJ-013"	"2015"	"2015"	1579	321418820	0.5	0.4
+	"Overexertion"	"GRINJ-014"	"1999"	"1999"	21	279040168	0.0	0.0
+	"Overexertion"	"GRINJ-014"	"2000"	"2000"	13	281421906	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2001"	"2001"	8	284968955	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2002"	"2002"	10	287625193	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2003"	"2003"	14	290107933	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2004"	"2004"	12	292805298	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2005"	"2005"	11	295516599	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2006"	"2006"	13	298379912	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2007"	"2007"	9	301231207	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2008"	"2008"	7	304093966	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2009"	"2009"	10	306771529	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2010"	"2010"	10	308745538	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2011"	"2011"	16	311591917	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2012"	"2012"	10	313914040	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2013"	"2013"	13	316128839	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2014"	"2014"	9	318857056	0.0 (Unreliable)	0.0 (Unreliable)
+	"Overexertion"	"GRINJ-014"	"2015"	"2015"	9	321418820	0.0 (Unreliable)	0.0 (Unreliable)
+	"Poisoning"	"GRINJ-015"	"1999"	"1999"	19741	279040168	7.1	7.1
+	"Poisoning"	"GRINJ-015"	"2000"	"2000"	20229	281421906	7.2	7.2
+	"Poisoning"	"GRINJ-015"	"2001"	"2001"	22242	284968955	7.8	7.8
+	"Poisoning"	"GRINJ-015"	"2002"	"2002"	26435	287625193	9.2	9.2
+	"Poisoning"	"GRINJ-015"	"2003"	"2003"	28700	290107933	9.9	9.9
+	"Poisoning"	"GRINJ-015"	"2004"	"2004"	30308	292805298	10.4	10.3
+	"Poisoning"	"GRINJ-015"	"2005"	"2005"	32691	295516599	11.1	11.0
+	"Poisoning"	"GRINJ-015"	"2006"	"2006"	37286	298379912	12.5	12.4
+	"Poisoning"	"GRINJ-015"	"2007"	"2007"	40059	301231207	13.3	13.2
+	"Poisoning"	"GRINJ-015"	"2008"	"2008"	41080	304093966	13.5	13.4
+	"Poisoning"	"GRINJ-015"	"2009"	"2009"	41592	306771529	13.6	13.4
+	"Poisoning"	"GRINJ-015"	"2010"	"2010"	42916	308745538	13.9	13.7
+	"Poisoning"	"GRINJ-015"	"2011"	"2011"	46047	311591917	14.8	14.6
+	"Poisoning"	"GRINJ-015"	"2012"	"2012"	46150	313914040	14.7	14.6
+	"Poisoning"	"GRINJ-015"	"2013"	"2013"	48545	316128839	15.4	15.2
+	"Poisoning"	"GRINJ-015"	"2014"	"2014"	51966	318857056	16.3	16.2
+	"Poisoning"	"GRINJ-015"	"2015"	"2015"	57567	321418820	17.9	17.9
+	"Struck by or against"	"GRINJ-016"	"1999"	"1999"	1308	279040168	0.5	0.5
+	"Struck by or against"	"GRINJ-016"	"2000"	"2000"	1292	281421906	0.5	0.5
+	"Struck by or against"	"GRINJ-016"	"2001"	"2001"	1244	284968955	0.4	0.4
+	"Struck by or against"	"GRINJ-016"	"2002"	"2002"	1182	287625193	0.4	0.4
+	"Struck by or against"	"GRINJ-016"	"2003"	"2003"	1077	290107933	0.4	0.4
+	"Struck by or against"	"GRINJ-016"	"2004"	"2004"	1013	292805298	0.3	0.3
+	"Struck by or against"	"GRINJ-016"	"2005"	"2005"	1094	295516599	0.4	0.4
+	"Struck by or against"	"GRINJ-016"	"2006"	"2006"	1061	298379912	0.4	0.3
+	"Struck by or against"	"GRINJ-016"	"2007"	"2007"	1009	301231207	0.3	0.3
+	"Struck by or against"	"GRINJ-016"	"2008"	"2008"	1060	304093966	0.3	0.3
+	"Struck by or against"	"GRINJ-016"	"2009"	"2009"	910	306771529	0.3	0.3
+	"Struck by or against"	"GRINJ-016"	"2010"	"2010"	912	308745538	0.3	0.3
+	"Struck by or against"	"GRINJ-016"	"2011"	"2011"	947	311591917	0.3	0.3
+	"Struck by or against"	"GRINJ-016"	"2012"	"2012"	985	313914040	0.3	0.3
+	"Struck by or against"	"GRINJ-016"	"2013"	"2013"	936	316128839	0.3	0.3
+	"Struck by or against"	"GRINJ-016"	"2014"	"2014"	1022	318857056	0.3	0.3
+	"Struck by or against"	"GRINJ-016"	"2015"	"2015"	889	321418820	0.3	0.3
+	"Suffocation"	"GRINJ-017"	"1999"	"1999"	11748	279040168	4.2	4.2
+	"Suffocation"	"GRINJ-017"	"2000"	"2000"	12098	281421906	4.3	4.3
+	"Suffocation"	"GRINJ-017"	"2001"	"2001"	12574	284968955	4.4	4.4
+	"Suffocation"	"GRINJ-017"	"2002"	"2002"	12791	287625193	4.4	4.5
+	"Suffocation"	"GRINJ-017"	"2003"	"2003"	12992	290107933	4.5	4.5
+	"Suffocation"	"GRINJ-017"	"2004"	"2004"	14043	292805298	4.8	4.8
+	"Suffocation"	"GRINJ-017"	"2005"	"2005"	13920	295516599	4.7	4.7
+	"Suffocation"	"GRINJ-017"	"2006"	"2006"	14179	298379912	4.8	4.7
+	"Suffocation"	"GRINJ-017"	"2007"	"2007"	14930	301231207	5.0	4.9
+	"Suffocation"	"GRINJ-017"	"2008"	"2008"	15434	304093966	5.1	5.0
+	"Suffocation"	"GRINJ-017"	"2009"	"2009"	15645	306771529	5.1	5.0
+	"Suffocation"	"GRINJ-017"	"2010"	"2010"	16362	308745538	5.3	5.2
+	"Suffocation"	"GRINJ-017"	"2011"	"2011"	16832	311591917	5.4	5.3
+	"Suffocation"	"GRINJ-017"	"2012"	"2012"	16987	313914040	5.4	5.3
+	"Suffocation"	"GRINJ-017"	"2013"	"2013"	17316	316128839	5.5	5.4
+	"Suffocation"	"GRINJ-017"	"2014"	"2014"	18646	318857056	5.8	5.7
+	"Suffocation"	"GRINJ-017"	"2015"	"2015"	19414	321418820	6.0	5.9
+	"Other specified, classifiable Injury"	"GRINJ-018"	"1999"	"1999"	1958	279040168	0.7	0.7
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2000"	"2000"	1889	281421906	0.7	0.7
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2001"	"2001"	1992	284968955	0.7	0.7
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2002"	"2002"	2006	287625193	0.7	0.7
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2003"	"2003"	1930	290107933	0.7	0.7
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2004"	"2004"	2029	292805298	0.7	0.7
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2005"	"2005"	2043	295516599	0.7	0.7
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2006"	"2006"	2039	298379912	0.7	0.7
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2007"	"2007"	2076	301231207	0.7	0.7
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2008"	"2008"	1982	304093966	0.7	0.6
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2009"	"2009"	1966	306771529	0.6	0.6
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2010"	"2010"	1958	308745538	0.6	0.6
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2011"	"2011"	2101	311591917	0.7	0.7
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2012"	"2012"	2044	313914040	0.7	0.6
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2013"	"2013"	2060	316128839	0.7	0.6
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2014"	"2014"	2062	318857056	0.6	0.6
+	"Other specified, classifiable Injury"	"GRINJ-018"	"2015"	"2015"	2074	321418820	0.6	0.6
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"1999"	"1999"	2222	279040168	0.8	0.8
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2000"	"2000"	2254	281421906	0.8	0.8
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2001"	"2001"	2292	284968955	0.8	0.8
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2002"	"2002"	2051	287625193	0.7	0.7
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2003"	"2003"	1995	290107933	0.7	0.7
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2004"	"2004"	1922	292805298	0.7	0.7
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2005"	"2005"	2001	295516599	0.7	0.7
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2006"	"2006"	2105	298379912	0.7	0.7
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2007"	"2007"	2150	301231207	0.7	0.7
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2008"	"2008"	2148	304093966	0.7	0.7
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2009"	"2009"	2021	306771529	0.7	0.6
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2010"	"2010"	1956	308745538	0.6	0.6
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2011"	"2011"	1955	311591917	0.6	0.6
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2012"	"2012"	1998	313914040	0.6	0.6
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2013"	"2013"	1974	316128839	0.6	0.6
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2014"	"2014"	1876	318857056	0.6	0.5
+	"Other specified, not elsewhere classified Injury"	"GRINJ-019"	"2015"	"2015"	1850	321418820	0.6	0.5
+	"Unspecified Injury"	"GRINJ-020"	"1999"	"1999"	9256	279040168	3.3	3.4
+	"Unspecified Injury"	"GRINJ-020"	"2000"	"2000"	8583	281421906	3.0	3.1
+	"Unspecified Injury"	"GRINJ-020"	"2001"	"2001"	9160	284968955	3.2	3.2
+	"Unspecified Injury"	"GRINJ-020"	"2002"	"2002"	8653	287625193	3.0	3.0
+	"Unspecified Injury"	"GRINJ-020"	"2003"	"2003"	8838	290107933	3.0	3.0
+	"Unspecified Injury"	"GRINJ-020"	"2004"	"2004"	8450	292805298	2.9	2.9
+	"Unspecified Injury"	"GRINJ-020"	"2005"	"2005"	8892	295516599	3.0	3.0
+	"Unspecified Injury"	"GRINJ-020"	"2006"	"2006"	8759	298379912	2.9	2.9
+	"Unspecified Injury"	"GRINJ-020"	"2007"	"2007"	8563	301231207	2.8	2.8
+	"Unspecified Injury"	"GRINJ-020"	"2008"	"2008"	8405	304093966	2.8	2.7
+	"Unspecified Injury"	"GRINJ-020"	"2009"	"2009"	7568	306771529	2.5	2.4
+	"Unspecified Injury"	"GRINJ-020"	"2010"	"2010"	8224	308745538	2.7	2.5
+	"Unspecified Injury"	"GRINJ-020"	"2011"	"2011"	8491	311591917	2.7	2.5
+	"Unspecified Injury"	"GRINJ-020"	"2012"	"2012"	8354	313914040	2.7	2.5
+	"Unspecified Injury"	"GRINJ-020"	"2013"	"2013"	7774	316128839	2.5	2.3
+	"Unspecified Injury"	"GRINJ-020"	"2014"	"2014"	8036	318857056	2.5	2.3
+	"Unspecified Injury"	"GRINJ-020"	"2015"	"2015"	9250	321418820	2.9	2.6
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"1999"	"1999"	549838	279040168	197.0	200.8
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2000"	"2000"	553091	281421906	196.5	199.6
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2001"	"2001"	553768	284968955	194.3	196.5
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2002"	"2002"	557271	287625193	193.7	194.4
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2003"	"2003"	556902	290107933	192.0	190.9
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2004"	"2004"	553888	292805298	189.2	186.8
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2005"	"2005"	559312	295516599	189.3	185.1
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2006"	"2006"	559888	298379912	187.6	181.8
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2007"	"2007"	562875	301231207	186.9	179.3
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2008"	"2008"	565469	304093966	186.0	176.4
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2009"	"2009"	567628	306771529	185.0	173.5
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2010"	"2010"	574743	308745538	186.2	172.8
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2011"	"2011"	576691	311591917	185.1	169.0
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2012"	"2012"	582623	313914040	185.6	166.5
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2013"	"2013"	584881	316128839	185.0	163.2
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2014"	"2014"	591700	318857056	185.6	161.2
+	"Non-Injury: Malignant neoplasms (Cancers)"	"GR113 020-043"	"2015"	"2015"	595930	321418820	185.4	158.5
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"1999"	"1999"	13227	279040168	4.7	4.8
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2000"	"2000"	13546	281421906	4.8	4.9
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2001"	"2001"	13676	284968955	4.8	4.9
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2002"	"2002"	13299	287625193	4.6	4.7
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2003"	"2003"	13563	290107933	4.7	4.7
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2004"	"2004"	13580	292805298	4.6	4.6
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2005"	"2005"	13710	295516599	4.6	4.6
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2006"	"2006"	14122	298379912	4.7	4.6
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2007"	"2007"	14204	301231207	4.7	4.6
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2008"	"2008"	14470	304093966	4.8	4.6
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2009"	"2009"	14605	306771529	4.8	4.5
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2010"	"2010"	14917	308745538	4.8	4.6
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2011"	"2011"	14997	311591917	4.8	4.5
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2012"	"2012"	15056	313914040	4.8	4.4
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2013"	"2013"	15232	316128839	4.8	4.3
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2014"	"2014"	16039	318857056	5.0	4.4
+	"Non-Injury: In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior"	"GR113-044"	"2015"	"2015"	16277	321418820	5.1	4.4
+	"Non-Injury: Meningitis"	"GR113-050"	"1999"	"1999"	850	279040168	0.3	0.3
+	"Non-Injury: Meningitis"	"GR113-050"	"2000"	"2000"	758	281421906	0.3	0.3
+	"Non-Injury: Meningitis"	"GR113-050"	"2001"	"2001"	727	284968955	0.3	0.3
+	"Non-Injury: Meningitis"	"GR113-050"	"2002"	"2002"	700	287625193	0.2	0.2
+	"Non-Injury: Meningitis"	"GR113-050"	"2003"	"2003"	730	290107933	0.3	0.2
+	"Non-Injury: Meningitis"	"GR113-050"	"2004"	"2004"	674	292805298	0.2	0.2
+	"Non-Injury: Meningitis"	"GR113-050"	"2005"	"2005"	669	295516599	0.2	0.2
+	"Non-Injury: Meningitis"	"GR113-050"	"2006"	"2006"	634	298379912	0.2	0.2
+	"Non-Injury: Meningitis"	"GR113-050"	"2007"	"2007"	655	301231207	0.2	0.2
+	"Non-Injury: Meningitis"	"GR113-050"	"2008"	"2008"	633	304093966	0.2	0.2
+	"Non-Injury: Meningitis"	"GR113-050"	"2009"	"2009"	649	306771529	0.2	0.2
+	"Non-Injury: Meningitis"	"GR113-050"	"2010"	"2010"	608	308745538	0.2	0.2
+	"Non-Injury: Meningitis"	"GR113-050"	"2011"	"2011"	611	311591917	0.2	0.2
+	"Non-Injury: Meningitis"	"GR113-050"	"2012"	"2012"	551	313914040	0.2	0.2
+	"Non-Injury: Meningitis"	"GR113-050"	"2013"	"2013"	584	316128839	0.2	0.2
+	"Non-Injury: Meningitis"	"GR113-050"	"2014"	"2014"	538	318857056	0.2	0.2
+	"Non-Injury: Meningitis"	"GR113-050"	"2015"	"2015"	555	321418820	0.2	0.2
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"1999"	"1999"	14593	279040168	5.2	5.4
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2000"	"2000"	15682	281421906	5.6	5.7
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2001"	"2001"	16544	284968955	5.8	5.9
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2002"	"2002"	16959	287625193	5.9	6.0
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2003"	"2003"	17997	290107933	6.2	6.3
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2004"	"2004"	17989	292805298	6.1	6.2
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2005"	"2005"	19544	295516599	6.6	6.6
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2006"	"2006"	19566	298379912	6.6	6.5
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2007"	"2007"	20058	301231207	6.7	6.5
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2008"	"2008"	20483	304093966	6.7	6.6
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2009"	"2009"	20565	306771529	6.7	6.5
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2010"	"2010"	22032	308745538	7.1	6.9
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2011"	"2011"	23111	311591917	7.4	7.0
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2012"	"2012"	23818	313914040	7.6	7.0
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2013"	"2013"	25196	316128839	8.0	7.3
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2014"	"2014"	26150	318857056	8.2	7.4
+	"Non-Injury: Parkinsons disease"	"GR113-051"	"2015"	"2015"	27972	321418820	8.7	7.7
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"1999"	"1999"	44536	279040168	16.0	16.5
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2000"	"2000"	49558	281421906	17.6	18.0
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2001"	"2001"	53852	284968955	18.9	19.3
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2002"	"2002"	58866	287625193	20.5	20.8
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2003"	"2003"	63457	290107933	21.9	22.1
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2004"	"2004"	65965	292805298	22.5	22.6
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2005"	"2005"	71599	295516599	24.2	24.0
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2006"	"2006"	72432	298379912	24.3	23.7
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2007"	"2007"	74632	301231207	24.8	23.8
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2008"	"2008"	82435	304093966	27.1	25.8
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2009"	"2009"	79003	306771529	25.8	24.2
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2010"	"2010"	83494	308745538	27.0	25.1
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2011"	"2011"	84974	311591917	27.3	24.7
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2012"	"2012"	83637	313914040	26.6	23.8
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2013"	"2013"	84767	316128839	26.8	23.5
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2014"	"2014"	93541	318857056	29.3	25.4
+	"Non-Injury: Alzheimers disease"	"GR113-052"	"2015"	"2015"	110561	321418820	34.4	29.4
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"1999"	"1999"	725192	279040168	259.9	266.4
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2000"	"2000"	710760	281421906	252.6	257.6
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2001"	"2001"	700142	284968955	245.7	249.5
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2002"	"2002"	696947	287625193	242.3	244.7
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2003"	"2003"	685089	290107933	236.1	236.3
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2004"	"2004"	652486	292805298	222.8	221.6
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2005"	"2005"	652091	295516599	220.7	216.8
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2006"	"2006"	631636	298379912	211.7	205.5
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2007"	"2007"	616067	301231207	204.5	196.1
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2008"	"2008"	616828	304093966	202.8	192.1
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2009"	"2009"	599413	306771529	195.4	182.8
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2010"	"2010"	597689	308745538	193.6	179.1
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2011"	"2011"	596577	311591917	191.5	173.7
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2012"	"2012"	599711	313914040	191.0	170.5
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2013"	"2013"	611105	316128839	193.3	169.8
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2014"	"2014"	614348	318857056	192.7	167.0
+	"Non-Injury: Diseases of Heart"	"GR113 055-068"	"2015"	"2015"	633842	321418820	197.2	168.5
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"1999"	"1999"	16968	279040168	6.1	6.2
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2000"	"2000"	18073	281421906	6.4	6.6
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2001"	"2001"	19250	284968955	6.8	6.9
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2002"	"2002"	20261	287625193	7.0	7.1
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2003"	"2003"	21940	290107933	7.6	7.6
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2004"	"2004"	23076	292805298	7.9	7.8
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2005"	"2005"	24902	295516599	8.4	8.3
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2006"	"2006"	23855	298379912	8.0	7.8
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2007"	"2007"	23965	301231207	8.0	7.6
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2008"	"2008"	25742	304093966	8.5	8.0
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2009"	"2009"	25734	306771529	8.4	7.8
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2010"	"2010"	26634	308745538	8.6	8.0
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2011"	"2011"	27853	311591917	8.9	8.1
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2012"	"2012"	29115	313914040	9.3	8.2
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2013"	"2013"	30770	316128839	9.7	8.5
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2014"	"2014"	30221	318857056	9.5	8.2
+	"Non-Injury: Essential (primary) hypertension and hypertensive renal disease"	"GR113-069"	"2015"	"2015"	32200	321418820	10.0	8.5
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"1999"	"1999"	167366	279040168	60.0	61.6
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2000"	"2000"	167661	281421906	59.6	60.9
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2001"	"2001"	163538	284968955	57.4	58.4
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2002"	"2002"	162672	287625193	56.6	57.3
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2003"	"2003"	157689	290107933	54.4	54.6
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2004"	"2004"	150074	292805298	51.3	51.2
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2005"	"2005"	143579	295516599	48.6	48.0
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2006"	"2006"	137119	298379912	46.0	44.8
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2007"	"2007"	135952	301231207	45.1	43.5
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2008"	"2008"	134148	304093966	44.1	42.1
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2009"	"2009"	128842	306771529	42.0	39.6
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2010"	"2010"	129476	308745538	41.9	39.1
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2011"	"2011"	128932	311591917	41.4	37.9
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2012"	"2012"	128546	313914040	40.9	36.9
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2013"	"2013"	128978	316128839	40.8	36.2
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2014"	"2014"	133103	318857056	41.7	36.5
+	"Non-Injury: Cerebrovascular diseases, including stroke"	"GR113-070"	"2015"	"2015"	140323	321418820	43.7	37.6
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"1999"	"1999"	14979	279040168	5.4	5.5
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2000"	"2000"	14393	281421906	5.1	5.2
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2001"	"2001"	14086	284968955	4.9	5.0
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2002"	"2002"	13821	287625193	4.8	4.9
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2003"	"2003"	13053	290107933	4.5	4.5
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2004"	"2004"	11861	292805298	4.1	4.1
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2005"	"2005"	11841	295516599	4.0	4.0
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2006"	"2006"	8652	298379912	2.9	2.8
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2007"	"2007"	8232	301231207	2.7	2.6
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2008"	"2008"	7836	304093966	2.6	2.4
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2009"	"2009"	7377	306771529	2.4	2.2
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2010"	"2010"	7230	308745538	2.3	2.2
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2011"	"2011"	6945	311591917	2.2	2.0
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2012"	"2012"	6946	313914040	2.2	2.0
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2013"	"2013"	6685	316128839	2.1	1.8
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2014"	"2014"	6356	318857056	2.0	1.7
+	"Non-Injury: Atherosclerosis"	"GR113-071"	"2015"	"2015"	6088	321418820	1.9	1.6
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"1999"	"1999"	25809	279040168	9.2	9.5
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2000"	"2000"	26036	281421906	9.3	9.4
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2001"	"2001"	25318	284968955	8.9	9.0
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2002"	"2002"	24927	287625193	8.7	8.8
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2003"	"2003"	24672	290107933	8.5	8.5
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2004"	"2004"	23693	292805298	8.1	8.1
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2005"	"2005"	23617	295516599	8.0	7.9
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2006"	"2006"	22484	298379912	7.5	7.4
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2007"	"2007"	21940	301231207	7.3	7.0
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2008"	"2008"	19929	304093966	6.6	6.3
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2009"	"2009"	19258	306771529	6.3	6.0
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2010"	"2010"	19184	308745538	6.2	5.8
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2011"	"2011"	18802	311591917	6.0	5.5
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2012"	"2012"	18667	313914040	5.9	5.4
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2013"	"2013"	18956	316128839	6.0	5.3
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2014"	"2014"	19199	318857056	6.0	5.3
+	"Non-Injury: Other diseases of the circulatory system"	"GR113 073-074"	"2015"	"2015"	19571	321418820	6.1	5.3
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"1999"	"1999"	4025	279040168	1.4	1.5
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2000"	"2000"	4603	281421906	1.6	1.7
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2001"	"2001"	4665	284968955	1.6	1.7
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2002"	"2002"	4711	287625193	1.6	1.6
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2003"	"2003"	4737	290107933	1.6	1.6
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2004"	"2004"	4673	292805298	1.6	1.6
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2005"	"2005"	4813	295516599	1.6	1.6
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2006"	"2006"	3995	298379912	1.3	1.3
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2007"	"2007"	4101	301231207	1.4	1.3
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2008"	"2008"	4042	304093966	1.3	1.3
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2009"	"2009"	4118	306771529	1.3	1.3
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2010"	"2010"	4241	308745538	1.4	1.3
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2011"	"2011"	4366	311591917	1.4	1.3
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2012"	"2012"	4446	313914040	1.4	1.3
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2013"	"2013"	4443	316128839	1.4	1.3
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2014"	"2014"	4548	318857056	1.4	1.3
+	"Non-Injury: Other disorders of circulatory system"	"GR113-075"	"2015"	"2015"	4522	321418820	1.4	1.2
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"1999"	"1999"	63730	279040168	22.8	23.5
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2000"	"2000"	65313	281421906	23.2	23.7
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2001"	"2001"	62034	284968955	21.8	22.2
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2002"	"2002"	65681	287625193	22.8	23.2
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2003"	"2003"	65163	290107933	22.5	22.6
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2004"	"2004"	59664	292805298	20.4	20.4
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2005"	"2005"	63001	295516599	21.3	21.0
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2006"	"2006"	56326	298379912	18.9	18.4
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2007"	"2007"	52717	301231207	17.5	16.8
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2008"	"2008"	56284	304093966	18.5	17.6
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2009"	"2009"	53692	306771529	17.5	16.5
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2010"	"2010"	50097	308745538	16.2	15.1
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2011"	"2011"	53826	311591917	17.3	15.7
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2012"	"2012"	50636	313914040	16.1	14.5
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2013"	"2013"	56979	316128839	18.0	15.9
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2014"	"2014"	55227	318857056	17.3	15.1
+	"Non-Injury: Influenza & Pneumonia"	"GR113 077-078"	"2015"	"2015"	57062	321418820	17.8	15.2
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"1999"	"1999"	540	279040168	0.2	0.2
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2000"	"2000"	425	281421906	0.2	0.2
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2001"	"2001"	347	284968955	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2002"	"2002"	386	287625193	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2003"	"2003"	421	290107933	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2004"	"2004"	319	292805298	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2005"	"2005"	404	295516599	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2006"	"2006"	297	298379912	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2007"	"2007"	255	301231207	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2008"	"2008"	284	304093966	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2009"	"2009"	272	306771529	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2010"	"2010"	213	308745538	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2011"	"2011"	247	311591917	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2012"	"2012"	239	313914040	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2013"	"2013"	285	316128839	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2014"	"2014"	289	318857056	0.1	0.1
+	"Non-Injury: Other acute lower respiratory infections"	"GR113 079"	"2015"	"2015"	309	321418820	0.1	0.1
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"1999"	"1999"	124181	279040168	44.5	45.4
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2000"	"2000"	122009	281421906	43.4	44.2
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2001"	"2001"	123013	284968955	43.2	43.9
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2002"	"2002"	124816	287625193	43.4	43.9
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2003"	"2003"	126382	290107933	43.6	43.7
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2004"	"2004"	121987	292805298	41.7	41.6
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2005"	"2005"	130933	295516599	44.3	43.9
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2006"	"2006"	124583	298379912	41.8	41.0
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2007"	"2007"	127924	301231207	42.5	41.3
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2008"	"2008"	141090	304093966	46.4	44.7
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2009"	"2009"	137353	306771529	44.8	42.7
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2010"	"2010"	138080	308745538	44.7	42.2
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2011"	"2011"	142943	311591917	45.9	42.5
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2012"	"2012"	143489	313914040	45.7	41.6
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2013"	"2013"	149205	316128839	47.2	42.1
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2014"	"2014"	147101	318857056	46.1	40.5
+	"Non-Injury: Chronic lower respiratory diseases"	"GR113 082"	"2015"	"2015"	155041	321418820	48.2	41.6
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"1999"	"1999"	1113	279040168	0.4	0.4
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2000"	"2000"	1161	281421906	0.4	0.4
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2001"	"2001"	1136	284968955	0.4	0.4
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2002"	"2002"	1114	287625193	0.4	0.4
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2003"	"2003"	1114	290107933	0.4	0.4
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2004"	"2004"	1033	292805298	0.4	0.4
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2005"	"2005"	1007	295516599	0.3	0.3
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2006"	"2006"	924	298379912	0.3	0.3
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2007"	"2007"	915	301231207	0.3	0.3
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2008"	"2008"	908	304093966	0.3	0.3
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2009"	"2009"	841	306771529	0.3	0.3
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2010"	"2010"	845	308745538	0.3	0.3
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2011"	"2011"	773	311591917	0.2	0.2
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2012"	"2012"	765	313914040	0.2	0.2
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2013"	"2013"	806	316128839	0.3	0.2
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2014"	"2014"	737	318857056	0.2	0.2
+	"Non-Injury: Pneumoconioses and chemical effects"	"GR113-087"	"2015"	"2015"	728	321418820	0.2	0.2
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"1999"	"1999"	15268	279040168	5.5	5.6
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2000"	"2000"	16636	281421906	5.9	6.0
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2001"	"2001"	17301	284968955	6.1	6.2
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2002"	"2002"	17593	287625193	6.1	6.2
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2003"	"2003"	17335	290107933	6.0	6.0
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2004"	"2004"	16780	292805298	5.7	5.7
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2005"	"2005"	17279	295516599	5.8	5.8
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2006"	"2006"	16887	298379912	5.7	5.5
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2007"	"2007"	16988	301231207	5.6	5.4
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2008"	"2008"	16608	304093966	5.5	5.2
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2009"	"2009"	15948	306771529	5.2	4.9
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2010"	"2010"	17011	308745538	5.5	5.1
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2011"	"2011"	18195	311591917	5.8	5.3
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2012"	"2012"	17897	313914040	5.7	5.1
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2013"	"2013"	18579	316128839	5.9	5.2
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2014"	"2014"	18792	318857056	5.9	5.1
+	"Non-Injury: Pneumonitis due to solids and liquids"	"GR113-088"	"2015"	"2015"	19803	321418820	6.2	5.3
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"1999"	"1999"	25031	279040168	9.0	9.2
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2000"	"2000"	25535	281421906	9.1	9.2
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2001"	"2001"	26178	284968955	9.2	9.3
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2002"	"2002"	25039	287625193	8.7	8.8
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2003"	"2003"	25520	290107933	8.8	8.8
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2004"	"2004"	27310	292805298	9.3	9.3
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2005"	"2005"	27056	295516599	9.2	9.1
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2006"	"2006"	27644	298379912	9.3	9.1
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2007"	"2007"	28508	301231207	9.5	9.2
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2008"	"2008"	29925	304093966	9.8	9.5
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2009"	"2009"	30530	306771529	10.0	9.5
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2010"	"2010"	31187	308745538	10.1	9.5
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2011"	"2011"	32758	311591917	10.5	9.7
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2012"	"2012"	33285	313914040	10.6	9.7
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2013"	"2013"	35217	316128839	11.1	10.0
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2014"	"2014"	36187	318857056	11.3	10.0
+	"Non-Injury: Other diseases of respiratory system"	"GR113-089"	"2015"	"2015"	38286	321418820	11.9	10.4
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"1999"	"1999"	24098	279040168	8.6	8.8
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2000"	"2000"	25016	281421906	8.9	9.0
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2001"	"2001"	25401	284968955	8.9	9.0
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2002"	"2002"	26539	287625193	9.2	9.2
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2003"	"2003"	27456	290107933	9.5	9.4
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2004"	"2004"	27123	292805298	9.3	9.1
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2005"	"2005"	28901	295516599	9.8	9.6
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2006"	"2006"	30333	298379912	10.2	9.9
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2007"	"2007"	31652	301231207	10.5	10.1
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2008"	"2008"	33056	304093966	10.9	10.4
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2009"	"2009"	33951	306771529	11.1	10.4
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2010"	"2010"	34972	308745538	11.3	10.6
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2011"	"2011"	36224	311591917	11.6	10.8
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2012"	"2012"	38181	313914040	12.2	11.1
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2013"	"2013"	41237	316128839	13.0	11.7
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2014"	"2014"	45205	318857056	14.2	12.6
+	"Non-Injury: All other diseases (Residual)"	"GR113-111"	"2015"	"2015"	51424	321418820	16.0	14.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"1999"	"1999"	81	279040168	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2000"	"2000"	85	281421906	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2001"	"2001"	78	284968955	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2002"	"2002"	106	287625193	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2003"	"2003"	78	290107933	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2004"	"2004"	113	292805298	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2005"	"2005"	111	295516599	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2006"	"2006"	82	298379912	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2007"	"2007"	119	301231207	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2008"	"2008"	110	304093966	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2009"	"2009"	107	306771529	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2010"	"2010"	79	308745538	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2011"	"2011"	87	311591917	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2012"	"2012"	64	313914040	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2013"	"2013"	344	316128839	0.1	0.1
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2014"	"2014"	75	318857056	0.0	0.0
+	"Non-Injury: Complications of medical and surgical care"	"GR113-135"	"2015"	"2015"	109	321418820	0.0	0.0
+"---"
+"Dataset: Compressed Mortality, 1999-2015"
+"Query Parameters:"
+"Title:"
+"2013 Urbanization: All"
+"Age Group: All"
+"Gender: All"
+"Hispanic Origin: All"
+"ICD-10 Codes: C00-D48 (Neoplasms), G00-G98 (Diseases of the nervous system), I00-I99 (Diseases of the circulatory system),"
+"J00-J98 (Diseases of the respiratory system), V01-V99 (Transport accidents), W00-X59 (Other external causes of accidental"
+"injury), X60-X84 (Intentional self-harm), X85-Y09 (Assault), Y10-Y34 (Event of undetermined intent), Y85-Y89 (Sequelae of"
+"external causes of morbidity and mortality)"
+"Race: All"
+"States: All"
+"Year: All, 1999 to 2015"
+"Group By: Injury Mechanism & All Other Leading Causes, Year"
+"Show Totals: False"
+"Show Zero Values: True"
+"Show Suppressed: False"
+"Standard Population: 2000 U.S. Std. Population"
+"Calculate Rates Per: 100,000"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/cmf.html for more information."
+"---"
+"Query Date: Dec 3, 2017 10:04:04 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. Compressed Mortality File"
+"1999-2015 on CDC WONDER Online Database, released December 2016. Data are from the Compressed Mortality File 1999-2015 Series 20"
+"No. 2U, 2016, as compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative"
+"Program. Accessed at http://wonder.cdc.gov/cmf-icd10.html on Dec 3, 2017 10:04:04 AM"
+"---"
+Messages:
+"1. Selections made to any variable in [ICD-10 Codes, ICD-10 113 Groups, Injury Mechanism & All Other Leading Causes] cause"
+"equivalent selections in the other variables. More Information: http://wonder.cdc.gov/wonder/help/faq.html#related-variables."
+"---"
+Caveats:
+"1. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#Unreliable."
+"2. About national population figures: population figures for 1999 are from the 1990-1999 series of bridged-race intercensal"
+"estimates of the July 1 resident population; population figures for 2000 and 2010 are bridged-race April 1 census counts;"
+"population figures for 2001-2009 are from the revised 2000-2009 series of bridged-race intercensal estimates of the July 1"
+"resident population; population figures for 2011 are bridged-race postcensal estimates of the July 1 resident population, from"
+"the Vintage 2011 series released by NCHS on July 18, 2012; population figures for 2012 are bridged-race postcensal estimates of"
+"the July 1 resident population, from the Vintage 2012 series released by NCHS on June 13, 2013; population figures for 2013 are"
+"bridged-race postcensal estimates of the July 1 resident population, from the Vintage 2013 series released by NCHS on June 26,"
+"2014; population figures for 2014 are bridged-race postcensal estimates of the July 1 resident population, from the Vintage 2014"
+"series released by NCHS on June 30, 2015. and population figures for 2015 are bridged-race postcensal estimates of the July 1"
+"resident population, from the Vintage 2015 series released by NCHS on June 28, 2016. More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#Population Information."
+"3. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/cmf.html#Age Group."
+"4. The populations used to calculate standard age-adjusted rates are documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#2000 Standard Population."
+"5. The method used to calculate age-adjusted rates is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#Age-Adjusted Rates."
+"6. Deaths for persons of unknown age are included in counts and crude rates, but are not included in age-adjusted rates."
+"7. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#2014-Revision."
+"8. Circumstances in California resulted in unusually high death counts for the ICD-10 cause of death code R99, ""Other"
+"ill-defined and unspecified causes of mortality"" for deaths occurring in years 2000 and 2001. Caution should be used in"
+"interpreting these data. More information: http://wonder.cdc.gov/wonder/help/cmf.html#California-Reporting-Anomalies."
+"9. Circumstances in Georgia for the years 2008-2009 have resulted in unusually high death counts for the ICD-10 cause of death"
+"code R99, ""Other ill-defined and unspecified causes of mortality."" Caution should be used in interpreting these data. More"
+"information: http://wonder.cdc.gov/wonder/help/cmf.html#Georgia-Reporting-Anomalies."
+"10. Circumstances in New Jersey for the year 2009 have resulted in unusually high death counts for the ICD-10 cause of death"
+"code R99, ""Other ill-defined and unspecified causes of mortality"" and therefore unusually low death counts in other ICD-10"
+"codes, most notably R95, ""Sudden Infant Death Syndrome"" and X40-X49, ""Unintentional poisoning."" Caution should be used in"
+"interpreting these data. More information: http://wonder.cdc.gov/wonder/help/cmf.html#New-Jersey-Reporting-Anomalies."
