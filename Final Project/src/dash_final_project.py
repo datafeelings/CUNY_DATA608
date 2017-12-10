@@ -15,13 +15,13 @@ pd.options.mode.chained_assignment = None
 ## Intro
 markdown_text_0 = """
 ### Introduction
-The terms *opioid epidemic* and *overdose epidemic* have recently become much-discussed topic in the US media,
+The terms *opioid epidemic* and *overdose epidemic* have recently become a much-discussed topic in the US media,
 as evidenced by the multiple recent news headlines and the following Google Trends chart:  
 
-![opioid epidemic](https://github.com/datafeelings/CUNY_DATA608/blob/master/Final%20Project/processed_data/opioid_image.png?raw=true)
+![opioid epidemic](https://lh3.googleusercontent.com/mXZ8BM94A-OkOcpuLuelnr0rMYpZ3lf8jCom3gA5XqUV8JLmhCd8hourRrGN3Au1KL8W8H0W7v2jG7Gp9khn=w1294-h960-rw)
   
 This project investigates the national and state-level data from the CDC on deaths related to drug overdose 
-in order to provide a more detailed view on the scale and social impact of the problem.
+in order to provide a more detailed view on the scale, social and geographical impact of the problem.
 """
 
 ## First chart
@@ -66,7 +66,7 @@ fig_1 = dict(data=data, layout=layout)
 
 ## Second chart
 
-markdown_text_2 = """
+markdown_text_2a = """
 ### Comparison to leading non-injury causes of death
   
 However, an epidemic condition is different from a simple increase in mortalities. According to the CDC:  
@@ -120,9 +120,81 @@ layout = dict(
     ),
 )
 
-fig_2 = dict(data=data, layout=layout)
+fig_2a = dict(data=data, layout=layout)
 
-## Third chart
+## Third chart (fig_2b)
+
+markdown_text_2b = """
+### The drugs behind the epidemic
+  
+Looking at the more recent data released by the CDC, the role of synthetic opioids becomes apparent: 
+in the last three years they have overtaken heroin as the leading cause of overdose deaths.
+"""
+
+def plotly_figure_line(df,x,y,group=None,group_colors=None,mode="lines+markers",
+                       title="",xaxis_title="",yaxis_title=""):
+    
+    if group is not None:
+        pass
+    else:
+        df["trace_id"] = "1" # set up a dummy variable to iterate over
+        group = "trace_id" 
+        
+    if group_colors is not None:
+        pass
+    else:
+        group_colors = {"1":"rgb(0,0,0)"}
+
+    groups = df[group].unique()
+    
+    data = []
+    
+    for item in groups: 
+        data.append(
+            Scatter(
+                x = df[df[group]==item][x],
+                y = df[df[group]==item][y],
+                name = item,
+                mode = mode,
+                line = dict(
+                        width = 2,
+                        color = group_colors[item],
+                        shape='spline'
+                    )
+                )
+            )
+
+    return data
+
+deaths_drugs = pd.read_csv("processed_data/deaths_drugs.csv")
+
+# Setup continuous x axis
+deaths_drugs["year_month"] = deaths_drugs["Year"].astype("str")+" "+deaths_drugs["Month"].astype("str")
+
+df = deaths_drugs[(deaths_drugs["State Name"]=="United States") & 
+                  (deaths_drugs["Month"].isin(["January","July"]))]
+
+# Setup the colorscale
+levels = deaths_drugs.Indicator.unique()
+colors = ['rgb(178,24,43)','rgb(239,138,98)','rgb(223,189,179)','rgb(150,150,150)','rgb(93,93,93)','rgb(77,77,177)']
+scl = dict([item for item in zip(levels,reversed(colors))])
+
+
+data = plotly_figure_line(df=df,x="year_month",y="Data Value",group="Indicator",
+                          group_colors = scl,mode="lines+markers")
+
+title = "12 Month-ending provisional counts of drug overdose deaths by drug"
+xaxis_title = ""
+yaxis_title = "Provisional count of deaths"
+
+
+layout = dict(title = title,
+              xaxis = dict(title=xaxis_title),
+              yaxis = dict(title=yaxis_title))
+
+fig_2b = dict(data=data, layout=layout)
+
+## Fourth chart (fig_3)
 
 markdown_text_3 = """
 ### Comparison of death rates per state
@@ -175,7 +247,7 @@ layout = dict(
     
 fig_3 = dict( data=data, layout=layout )
 
-## Fourth chart: Explore state over time
+## Chart 5: Explore state over time
 
 markdown_text_4 = """
 ### Explore the data per state
@@ -187,7 +259,7 @@ groups that were affected most by the epidemic.
 states = state_deaths["State"].unique()
 states_inputset = [dict(label= item, value= item) for item in states]
 
-## Fifth chart: Explore state demographics
+## Chart 6: Explore state demographics
 
 deaths_dem = pd.read_csv("processed_data/deaths_dem.csv")
 
@@ -209,9 +281,38 @@ demographic or urbanization, and all observations that are based on unreliably s
 an ![x](https://github.com/datafeelings/CUNY_DATA608/blob/master/Final%20Project/processed_data/x.png?raw=true "x").
 """
 
-## Sixth chart: Explore state demographics
+## Chart 7: Explore state demographics
 
 urb_deaths = pd.read_csv("processed_data/urb_deaths.csv")
+
+# Technical notes and reference
+
+markdown_text_6 = """
+### Technical notes
+  
+The data presented in these charts was queried using a GUI tools [CDC WONDER](http://wonder.cdc.gov/cmf-icd10.html) and [NVSS Vital Statistics Rapid Release](https://www.cdc.gov/nchs/nvss/vsrr/drug-overdose-data.htm). 
+Drug overdose related deaths are those classified as fitting at least one the following underlying cause-of-death codes from the Tenth Revision of ICD (ICD–10): X40–X44 (unintentional), X60–X64 (suicide), X85 (homicide), and Y10–Y14 (undetermined). Drug overdose deaths involving selected drug categories are identified by specific multiple cause-of-death codes. 
+
+Further documentation is available [here](https://wonder.cdc.gov/wonder/help/cmf.html#).
+
+Excluding the chart with the split by demograpics, the data shows an age-adjusted death rate. The age-adjusted rate is used for the following methodological reason cited on the [CDC website](https://wonder.cdc.gov/wonder/help/cmf.html#Age-Adjusted Rates):
+>The rates of almost all causes of death vary by age. Age adjustment is a technique for "removing" the effects of age from crude rates, so as to allow meaningful comparisons across populations with different underlying age structures. For example, comparing the crude rate of heart disease in Florida to that of California is misleading, because the relatively older population in Florida will lead to a higher crude death rate, even if the age-specific rates of heart disease in Florida and California are the same. For such a comparison, age-adjusted rates are preferable. Age-adjusted rates should be viewed as relative indexes rather than as direct or actual measures of mortality risk.
+  
+This project was developed in Jupyter Notebook and ported to Plotly Dash.   
+All the data preprocessing steps are available in this [notebook](https://github.com/datafeelings/CUNY_DATA608/blob/master/Final%20Project/Dmitriy_Vecheruk_data608_final_project.ipynb).
+  
+  
+### Reference
+
+1) Centers for Disease Control and Prevention, National Center for Health Statistics. Compressed Mortality File 1999-2015 on CDC WONDER Online Database, released December 2016. Data are from the Compressed Mortality File 1999-2015 Series 20 No. 2U, 2016, as compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative Program. Accessed at http://wonder.cdc.gov/cmf-icd10.html on Dec 3, 2017 9:27:17 AM
+  
+2) Ahmad FB, Rossen LM, Spencer MR, Warner M, Sutton P. Provisional drug overdose death counts. National Center for Health Statistics. 2017. Accessed at https://www.cdc.gov/nchs/nvss/vsrr/drug-overdose-data.htm on Dec 10, 2017 9:00:00 AM
+ 
+3) US state codes: https://www.50states.com/abbreviations.htm  
+4) Pandas documentation: https://pandas.pydata.org/pandas-docs/stable/  
+5) Google Trends on "Opioid Epidemic": https://trends.google.com/trends/explore?geo=US&q=opioid%20epidemic  
+6) CDC definition of an epidemic: https://www.cdc.gov/ophss/csels/dsepd/ss1978/lesson1/section11.html  
+"""
 
 
 ## ------------- ## App style ## ------------- ##
@@ -232,7 +333,7 @@ app.layout = html.Div([
     # Title and intro
     html.H2('Drug overdose epidemic in the United States:'),
     html.H3('An overview of the dynamics between 1999 and 2015'),
-    html.P('By Dmitriy Vecheruk'),
+    html.P('CUNY MSDA DATA 608 Final Project by Dmitriy Vecheruk'),
     dcc.Markdown(children=markdown_text_0),
     
     # First chart: Deaths over time 
@@ -244,13 +345,20 @@ app.layout = html.Div([
     ),
     
     # Second chart: Causes growth comparison
-    dcc.Markdown(children=markdown_text_2),
+    dcc.Markdown(children=markdown_text_2a),
     dcc.Graph(
         id="deaths_comp",
-        figure=fig_2
+        figure=fig_2a
     ),
     
-    # Third chart: Rates per state
+    # Third chart: Drugs comparison
+    dcc.Markdown(children=markdown_text_2b),
+    dcc.Graph(
+        id="deaths_drugs",
+        figure=fig_2b
+    ),
+    
+    # Fourth chart: Rates per state
     dcc.Markdown(children=markdown_text_3),
     dcc.Graph(
         id="state_deaths_map",
@@ -261,17 +369,19 @@ app.layout = html.Div([
     dcc.Markdown(children=markdown_text_4),
     html.Label('Select a state',className='row'),
     
-    # Fourth chart: Rate over time in a state
+    # chart 5: Rate over time in a state
     dcc.Dropdown(
         id="state_dropdown",
         options=states_inputset,
         value='Ohio',
-        className='row'),
+        className='four columns'),
+    
+    html.Div([],className='row'),
     
     dcc.Graph(id="state_deaths_year",
               className='container',style={"float":"left","width":"50%"}),
     
-    # Fifth chart: State rate by demographic 
+    # chart 6: State rate by demographic 
     dcc.Graph(id="deaths_dem_comp",className='container',style={"float":"right","width":"50%"}),
     
     # Markdown comments
@@ -279,8 +389,14 @@ app.layout = html.Div([
         dcc.Markdown(children=markdown_text_5)
     ], className='container',style={"float":"left","width":"50%"}),
     
-    # Sixth chart: State rate by urbanization 
-    dcc.Graph(id="urb_deaths",className='container',style={"float":"right","width":"50%"})
+    # chart 7: State rate by urbanization 
+    dcc.Graph(id="urb_deaths",className='container',style={"float":"right","width":"50%"}),
+    
+    # Technical notes and reference 
+    html.Div([
+        dcc.Markdown(children=markdown_text_6)
+    ], className='row',style={"float":"left","width":"100%"}),
+    
        
 ], style={"backgroundColor": colors["background"]})
 
