@@ -32,7 +32,7 @@ markdown_text_1 = """
 The deaths from drug abuse related causes have been growing strongly over the past 16 years. 
 """
 
-deaths_year = pd.read_csv("processed_data/deaths_year.csv")
+deaths_year = pd.read_csv("https://raw.githubusercontent.com/datafeelings/CUNY_DATA608/master/Final%20Project/processed_data/deaths_year.csv")
 
 df = deaths_year[deaths_year["Cause"]=="Drug overdose related causes"]
 x = "Year"
@@ -79,7 +79,7 @@ to call out an epidemic of overdose-related mortalities.
 
 """
 
-deaths_year_comp = pd.read_csv("processed_data/deaths_year_comp.csv")
+deaths_year_comp = pd.read_csv("https://raw.githubusercontent.com/datafeelings/CUNY_DATA608/master/Final%20Project/processed_data/deaths_year_comp.csv")
 
 df = deaths_year_comp[deaths_year_comp["Year"]==2015.0].sort_values("Growth since 1999")
 x = "Growth since 1999"
@@ -166,7 +166,7 @@ def plotly_figure_line(df,x,y,group=None,group_colors=None,mode="lines+markers",
 
     return data
 
-deaths_drugs = pd.read_csv("processed_data/deaths_drugs.csv")
+deaths_drugs = pd.read_csv("https://raw.githubusercontent.com/datafeelings/CUNY_DATA608/master/Final%20Project/processed_data/deaths_drugs.csv")
 
 # Setup continuous x axis
 deaths_drugs["year_month"] = deaths_drugs["Year"].astype("str")+" "+deaths_drugs["Month"].astype("str")
@@ -204,7 +204,7 @@ there is a troubling cluster of high death rates around West Virginia, another o
 New England, and New Mexico and Utah are worse than the rest of the states in the west of the country.
 """
 
-state_deaths = pd.read_csv("processed_data/state_deaths.csv")
+state_deaths = pd.read_csv("https://raw.githubusercontent.com/datafeelings/CUNY_DATA608/master/Final%20Project/processed_data/state_deaths.csv")
 
 #  Make choropleth map
 
@@ -261,7 +261,7 @@ states_inputset = [dict(label= item, value= item) for item in states]
 
 ## Chart 6: Explore state demographics
 
-deaths_dem = pd.read_csv("processed_data/deaths_dem.csv")
+deaths_dem = pd.read_csv("https://raw.githubusercontent.com/datafeelings/CUNY_DATA608/master/Final%20Project/processed_data/deaths_dem.csv")
 
 ## Markdown comments for the state
 
@@ -283,7 +283,7 @@ an ![x](https://github.com/datafeelings/CUNY_DATA608/blob/master/Final%20Project
 
 ## Chart 7: Explore state demographics
 
-urb_deaths = pd.read_csv("processed_data/urb_deaths.csv")
+urb_deaths = pd.read_csv("https://raw.githubusercontent.com/datafeelings/CUNY_DATA608/master/Final%20Project/processed_data/urb_deaths.csv")
 
 # Technical notes and reference
 
