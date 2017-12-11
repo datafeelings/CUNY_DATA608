@@ -291,11 +291,12 @@ markdown_text_6 = """
 ### Technical notes
   
 The data presented in these charts was queried using a GUI tools [CDC WONDER](http://wonder.cdc.gov/cmf-icd10.html) and [NVSS Vital Statistics Rapid Release](https://www.cdc.gov/nchs/nvss/vsrr/drug-overdose-data.htm). 
-Drug overdose related deaths are those classified as fitting at least one the following underlying cause-of-death codes from the Tenth Revision of ICD (ICD–10): X40–X44 (unintentional), X60–X64 (suicide), X85 (homicide), and Y10–Y14 (undetermined). Drug overdose deaths involving selected drug categories are identified by specific multiple cause-of-death codes. 
+Drug overdose related deaths are those classified as fitting at least one the following underlying cause-of-death codes from the Tenth Revision of ICD (ICD–10): X40–X44 (unintentional), X60–X64 (suicide), X85 (homicide), 
+and Y10–Y14 (undetermined). Drug overdose deaths involving selected drug categories are identified by specific multiple cause-of-death codes. 
 
-Further documentation is available [here](https://wonder.cdc.gov/wonder/help/cmf.html#).
+Further documentation is available [here](https://wonder.cdc.gov/wonder/help/cmf.html).
 
-Excluding the chart with the split by demograpics, the data shows an age-adjusted death rate. The age-adjusted rate is used for the following methodological reason cited on the [CDC website](https://wonder.cdc.gov/wonder/help/cmf.html#Age-Adjusted Rates):
+Excluding the chart with the split by demograpics, the data shows an age-adjusted death rate. The age-adjusted rate is used for the following methodological reason cited on the [CDC website](https://wonder.cdc.gov/wonder/help/cmf.html):
 >The rates of almost all causes of death vary by age. Age adjustment is a technique for "removing" the effects of age from crude rates, so as to allow meaningful comparisons across populations with different underlying age structures. For example, comparing the crude rate of heart disease in Florida to that of California is misleading, because the relatively older population in Florida will lead to a higher crude death rate, even if the age-specific rates of heart disease in Florida and California are the same. For such a comparison, age-adjusted rates are preferable. Age-adjusted rates should be viewed as relative indexes rather than as direct or actual measures of mortality risk.
   
 This project was developed in Jupyter Notebook and ported to Plotly Dash.   
